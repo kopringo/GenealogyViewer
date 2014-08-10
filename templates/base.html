@@ -1,0 +1,72 @@
+{% load static %}{% load i18n %}<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	
+	{% block css %}{% endblock %}
+	{% block js %}{% endblock %}
+	{% block extrahead %}{% endblock %}
+	
+    <!-- Le styles -->
+    <link href="{% static 'bootstrap/dist/css/bootstrap.css' %}" rel="stylesheet">
+    <link href="/media/libs/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="/media/css/style.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    <script type="text/javascript" src='{% static 'jquery/jquery.js' %}'></script>
+    
+	<script src="/media/libs/bootstrap/js/bootstrap.min.js"></script>
+	<script src="/media/js/script.js"></script>
+  </head>
+
+  <body data-spy="scroll" data-target=".subnav" data-offset="50">
+
+	<div class="container">
+  <div class="row">
+    <div class="col-md-2">
+    	<br/>
+      <ul class="nav nav-list">
+		  <li class="nav-header">
+		    Koperkiewicz.pl
+		  </li>
+		  <li class="<?if($this->action == 'index'){?>active<?}?>">
+		  	<a href="{% url "home" %}">Wprowadzenie</a>
+		  </li>
+		  <li class="<?if(in_array($this->action, array('person-list', 'person-view'))){?>active<?}?>">
+		    <a href="{% url "person_list" %}">Osoby</a>
+		  </li>
+		  <li class="<?if($this->action == 'family-list'){?>active<?}?>">
+		    <a href="{% url "family_list" %}">Rodziny</a>
+		  </li>
+		  <li class="{% if action == "branch_list" %}active{% endif %}">
+		    <a href="{% url "branch_list" %}">Gałęzie</a>
+		  </li>
+		  <li class="nav-header">
+		    Dokumenty
+		  </li>
+		  <li  class="<?if($this->action == 'doc-list'){?>active<?}?>">
+		    <a href="<?=$this->baseurl?>/doc-list">Metryki</a>
+		  </li>
+		</ul>
+
+    </div>
+    <div class="col-md-10">
+	{% block content %}
+	
+	{% endblock %}
+	<!--Body content-->
+    </div>
+  </div>
+</div>
+	
+	
+  </body>
+</html>
