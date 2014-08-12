@@ -22,7 +22,7 @@ MANAGERS = ADMINS
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = ''
+SECRET_KEY = 'change'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -117,4 +117,7 @@ BOWER_INSTALLED_APPS = (
     'bootstrap'
 )
 
-from settings_local import *
+try:
+    from settings_local import *
+except:
+    pass
