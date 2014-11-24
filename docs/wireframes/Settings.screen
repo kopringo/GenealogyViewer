@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+  <widgets xsi:type="model:Browser" id="2" x="64" y="152" width="1177" height="593" text="Browser&#xA;http://..." measuredWidth="1177" measuredHeight="593"/>
+  <widgets xsi:type="model:HLine" id="3" x="64" y="248" width="1177" measuredWidth="1177" measuredHeight="6" foreground="#e4e4e4"/>
+  <widgets xsi:type="model:LinkBar" id="4" x="1024" y="214" text="Osoby, Miejsca, Pliki, Opcje" measuredWidth="199" measuredHeight="23">
+    <font/>
+    <items x="0" y="0" width="37" height="23" text="Osoby"/>
+    <items x="55" y="0" width="46" height="23" text="Miejsca"/>
+    <items x="119" y="0" width="25" height="23" text="Pliki"/>
+    <items x="162" y="0" width="36" height="23" text="Opcje"/>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>
