@@ -1,6 +1,6 @@
 # Create your views here.
 
-from GrampsWeb.utils import render_to_response
+from GenealogyViewer.utils import render_to_response
 from models import *
 
 def home(request):

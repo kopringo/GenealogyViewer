@@ -25,40 +25,54 @@
     
 	<script src="/media/libs/bootstrap/js/bootstrap.min.js"></script>
 	<script src="/media/js/script.js"></script>
+	<style>
+		header{
+			border-bottom: 1px solid #e4e4e4 !important;
+		}
+	</style>
   </head>
 
   <body data-spy="scroll" data-target=".subnav" data-offset="50">
 
+	<header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
+	  <div class="container">
+	    <div class="navbar-header">
+	      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a href="../" class="navbar-brand">GenealogyViewer</a>
+	    </div>
+	    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+	      <ul class="nav navbar-nav">
+	          
+	      </ul>
+	      <ul class="nav navbar-nav navbar-right">
+	        <li class="<?if($this->action == 'index'){?>active<?}?>">
+			  	<a href="{% url "home" %}">Wprowadzenie</a>
+			  </li>
+			  <li class="<?if(in_array($this->action, array('person-list', 'person-view'))){?>active<?}?>">
+			    <a href="{% url "person_list" %}">Osoby</a>
+			  </li>
+			  <li class="<?if($this->action == 'family-list'){?>active<?}?>">
+			    <a href="{% url "family_list" %}">Rodziny</a>
+			  </li>
+			  <li class="{% if action == "branch_list" %}active{% endif %}">
+			    <a href="{% url "branch_list" %}">Gałęzie</a>
+			  </li>
+			  <li  class="<?if($this->action == 'doc-list'){?>active<?}?>">
+			    <a href="<?=$this->baseurl?>/doc-list">Metryki</a>
+			  </li>
+	      </ul>
+	    </nav>
+	  </div>
+	</header>
+
 	<div class="container">
   <div class="row">
-    <div class="col-md-2">
-    	<br/>
-      <ul class="nav nav-list">
-		  <li class="nav-header">
-		    Koperkiewicz.pl
-		  </li>
-		  <li class="<?if($this->action == 'index'){?>active<?}?>">
-		  	<a href="{% url "home" %}">Wprowadzenie</a>
-		  </li>
-		  <li class="<?if(in_array($this->action, array('person-list', 'person-view'))){?>active<?}?>">
-		    <a href="{% url "person_list" %}">Osoby</a>
-		  </li>
-		  <li class="<?if($this->action == 'family-list'){?>active<?}?>">
-		    <a href="{% url "family_list" %}">Rodziny</a>
-		  </li>
-		  <li class="{% if action == "branch_list" %}active{% endif %}">
-		    <a href="{% url "branch_list" %}">Gałęzie</a>
-		  </li>
-		  <li class="nav-header">
-		    Dokumenty
-		  </li>
-		  <li  class="<?if($this->action == 'doc-list'){?>active<?}?>">
-		    <a href="<?=$this->baseurl?>/doc-list">Metryki</a>
-		  </li>
-		</ul>
-
-    </div>
-    <div class="col-md-10">
+    <div class="col-md-12">
 	{% block content %}
 	
 	{% endblock %}
