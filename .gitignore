@@ -17,7 +17,7 @@ lib/
 lib64/
 parts/
 sdist/
-var/
+var/*/*
 *.egg-info/
 .installed.cfg
 *.egg
@@ -55,5 +55,10 @@ docs/_build/
 # our
 db.sqlite3
 GrampsWeb/settings_local.py
+GenealogyViewer/settings_local.py
 static_bower
 static/*
+.settings
+
+# Except this file
+!.gitkeep

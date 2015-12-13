@@ -27,8 +27,6 @@ SECRET_KEY = 'change'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-TEMPLATE_DEBUG = True
-
 ALLOWED_HOSTS = []
 
 
@@ -43,7 +41,8 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'djangobower',
     'rest_framework',
-    'core',
+    'apps.genealogy',
+    'apps.web',
     #'web',
 )
 
@@ -60,9 +59,28 @@ ROOT_URLCONF = 'GenealogyViewer.urls'
 
 WSGI_APPLICATION = 'GenealogyViewer.wsgi.application'
 
-TEMPLATE_DIRS = (
-    os.path.join(PROJECT_DIR, 'templates'),
-)
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [
+            os.path.join(PROJECT_DIR, 'templates'),
+        ],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                # Insert your TEMPLATE_CONTEXT_PROCESSORS here or use this
+                # list if you haven't customized them:
+                'django.contrib.auth.context_processors.auth',
+                'django.template.context_processors.debug',
+                'django.template.context_processors.i18n',
+                'django.template.context_processors.media',
+                'django.template.context_processors.static',
+                'django.template.context_processors.tz',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
 
 STATICFILES_FINDERS = (
     "django.contrib.staticfiles.finders.FileSystemFinder",
@@ -108,13 +126,13 @@ SITE_ID = 1
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
+STATIC_ROOT = os.path.join(PROJECT_DIR, 'var', 'static')
 
-BOWER_COMPONENTS_ROOT = os.path.join(PROJECT_DIR, 'static_bower')
+BOWER_COMPONENTS_ROOT = os.path.join(PROJECT_DIR, 'var')
 BOWER_INSTALLED_APPS = (
     'jquery#1.9',
-    'underscore',
-    'bootstrap'
+    'underscore#1.8.3',
+    'bootstrap#3.3.6'
 )
 
 try:

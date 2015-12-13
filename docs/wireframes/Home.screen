@@ -2,24 +2,24 @@
 <model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
   <widgets xsi:type="model:Browser" id="2" x="64" y="152" width="1177" height="593" text="Browser&#xA;http://..." measuredWidth="1177" measuredHeight="593"/>
   <widgets xsi:type="model:HLine" id="3" x="64" y="248" width="1177" measuredWidth="1177" measuredHeight="6" foreground="#e4e4e4"/>
-  <widgets xsi:type="model:LinkBar" id="4" x="1024" y="214" text="Osoby, Miejsca, Pliki, Opcje" measuredWidth="199" measuredHeight="23">
+  <widgets xsi:type="model:LinkBar" id="4" x="1024" y="214" text="Osoby, Miejsca, Pliki, Opcje" measuredWidth="204" measuredHeight="22">
     <font/>
-    <items link="Persons.screen" x="0" y="0" width="37" height="23" text="Osoby"/>
-    <items link="Places.screen" x="55" y="0" width="46" height="23" text="Miejsca"/>
-    <items link="Files.screen" x="119" y="0" width="25" height="23" text="Pliki"/>
-    <items link="Settings.screen" x="162" y="0" width="36" height="23" text="Opcje"/>
+    <items link="Persons.screen" x="0" y="0" width="40" height="22" text="Osoby"/>
+    <items link="Places.screen" x="58" y="0" width="46" height="22" text="Miejsca"/>
+    <items link="Files.screen" x="122" y="0" width="26" height="22" text="Pliki"/>
+    <items link="Settings.screen" x="166" y="0" width="37" height="22" text="Opcje"/>
   </widgets>
-  <widgets xsi:type="model:Label" id="5" x="74" y="211" text="GenealogyViewer" measuredWidth="157" measuredHeight="30">
+  <widgets xsi:type="model:Label" id="5" x="112" y="210" text="GenealogyViewer" measuredWidth="175" measuredHeight="30">
     <font size="18px"/>
   </widgets>
   <widgets xsi:type="model:Panel" id="6" x="88" y="624" width="233" measuredWidth="233" measuredHeight="100"/>
-  <widgets xsi:type="model:Label" id="7" x="176" y="655" text="miniaturka" measuredWidth="66" measuredHeight="23">
+  <widgets xsi:type="model:Label" id="7" x="176" y="655" text="miniaturka" measuredWidth="71" measuredHeight="22">
     <font/>
   </widgets>
-  <widgets xsi:type="model:Label" id="8" x="501" y="443" text="graf edytowalny rodziny." measuredWidth="140" measuredHeight="23">
+  <widgets xsi:type="model:Label" id="8" x="501" y="443" text="graf edytowalny rodziny." measuredWidth="153" measuredHeight="22">
     <font/>
   </widgets>
-  <widgets xsi:type="model:Label" id="9" x="505" y="480" text="genogram" measuredWidth="63" measuredHeight="23">
+  <widgets xsi:type="model:Label" id="9" x="505" y="480" text="genogram" measuredWidth="68" measuredHeight="22">
     <font/>
   </widgets>
   <widgets xsi:type="model:Text" id="10" x="478" y="534" width="400" height="120" text="http://d3js.org/&#xA;http://www.jointjs.com/&#xA;https://github.com/grampy/GenoTouch" measuredWidth="400" measuredHeight="120">
