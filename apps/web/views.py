@@ -15,7 +15,7 @@ def home(request):
 def person_list(request):
     params = {}
     params['person_array'] = Person.objects.all().order_by('last_name', 'first_name')
-    return render_to_response(request, 'core/person-list.html', params)
+    return render_to_response(request, 'web/person-list.html', params)
 
 def person_view(request, handle):
     params = {
@@ -23,7 +23,7 @@ def person_view(request, handle):
         
     }
     
-    return render_to_response(request, 'core/person_view.html', params)
+    return render_to_response(request, 'web/person_view.html', params)
 
 # ************************************************************************
 # family 
@@ -32,7 +32,7 @@ def person_view(request, handle):
 def family_list(request):
     params = {}
     params['family_array'] = Family.objects.all()
-    return render_to_response(request, 'core/family-list.html', params)
+    return render_to_response(request, 'web/family-list.html', params)
 
 # ************************************************************************
 # branch
@@ -111,11 +111,11 @@ def branch_list(request):
     persons = Person.objects.all().filter(parent_family=None).filter(last_name='Koperkiewicz')
     params['persons'] = persons
     params['action'] = 'branch_list'
-    return render_to_response(request, 'core/branch-list.html', params)
+    return render_to_response(request, 'web/branch-list.html', params)
     
     
     
     
 def test(request):
     params = {}
-    return render_to_response(request, 'core/test.phtml', params)
+    return render_to_response(request, 'web/test.phtml', params)

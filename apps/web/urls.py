@@ -12,12 +12,12 @@ urlpatterns = patterns('core',
     
     
     
-    url(r'^person-list$',                      person_list,  name='person_list'),
-    url(r'^person-view/(?P<handle>.*)/$',      person_view,  name='person_view'),
+    url(r'^person/list$',                 person_list,  name='person_list'),
+    url(r'^person/(?P<handle>.*)/$',      person_view,  name='person_view'),
     
-    url(r'^family-list$',                      family_list,  name='family_list'),
+    url(r'^family/list$',                      family_list,  name='family_list'),
     
-    url(r'^branch-list$',                      branch_list, name='branch_list'),
+    url(r'^branch/list$',                      branch_list, name='branch_list'),
     
     url(r'^test$',                             test),
     

@@ -312,13 +312,13 @@ class DateObject(models.Model):
 
 class Tag(models.Model):
     handle = models.CharField(max_length=19, unique=True)
-    gramps_id = models.TextField(blank=True, null=True)
+    gramps_id = models.CharField(max_length=128, blank=True, null=True)
     last_saved = models.DateTimeField('last changed', auto_now=True) 
     last_changed = models.DateTimeField('last changed', null=True,
                                         blank=True) # user edits
     last_changed_by = models.TextField(blank=True, null=True)
 
-    name = models.TextField('name')
+    name = models.CharField('name', max_length=128)
     color = models.CharField(max_length=13, blank=True, null=True) # "#000000000000" # Black
     priority = models.IntegerField('priority', blank=True, null=True)
 
@@ -343,7 +343,8 @@ class PrimaryObject(models.Model):
     """
     Common attribute of all primary objects with key on the handle
     """
-    class Meta: abstract = True
+    class Meta:
+        abstract = True
 
     ## Fields:
     id = models.AutoField(primary_key=True)
@@ -375,8 +376,8 @@ class Person(PrimaryObject):
     """
     The model for the person object
     """
-    first_name = models.TextField(blank=True)
-    last_name = models.TextField(blank=True)
+    first_name = models.CharField(max_length=128, blank=True)
+    last_name = models.CharField(max_length=128, blank=True)
     gender_type = models.IntegerField('GenderType', choices=GENDER_TYPE, default=2)
     
     probably_alive = models.BooleanField("Probably alive")
@@ -479,10 +480,10 @@ class Event(DateObject, PrimaryObject):
                                  self.description)
 
 class Place(PrimaryObject):
-    title = models.TextField(blank=True)
+    title = models.CharField(max_length=128, blank=True)
     #locations = models.ManyToManyField('Location', null=True, blank=True)
-    long = models.TextField(blank=True)
-    lat = models.TextField(blank=True)
+    long = models.CharField(max_length=16, blank=True)
+    lat = models.CharField(max_length=16, blank=True)
     #url_list = models.ManyToManyField('Url', null=True, blank=True)
 
     def get_selection_string(self):
@@ -496,8 +497,8 @@ class Place(PrimaryObject):
     #   .location_set
 
 class Media(DateObject, PrimaryObject):
-    path = models.TextField(blank=True)
-    mime = models.TextField(blank=True, null=True)
+    path = models.CharField(max_length=128, blank=True)
+    mime = models.CharField(max_length=32, blank=True, null=True)
     desc = models.TextField("Title", blank=True)
 #    references = generic.GenericRelation('MediaRef', related_name="refs",
 #                                         content_type_field="object_type",

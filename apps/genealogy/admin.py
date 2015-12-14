@@ -4,7 +4,11 @@ from django.contrib import admin
 
 from models import *
 
-admin.site.register(Person)
+class PersonAdmin(admin.ModelAdmin):
+    fields = ( 'first_name', 'last_name', 'birth', 'death')
+
+admin.site.register(Person, PersonAdmin)
+
 admin.site.register(Family)
 admin.site.register(Event)
 admin.site.register(Place)
