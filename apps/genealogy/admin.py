@@ -16,10 +16,13 @@ class FamilyInlineAdmin(admin.TabularInline):
 class PersonAdmin(admin.ModelAdmin):
     list_display = ( 'first_name', 'last_name', 'birth', 'death')
     list_display_links = ( 'first_name', 'last_name',)
-    inlines = (FamilyInlineAdmin, )
+    #inlines = (FamilyInlineAdmin, )
 admin.site.register(Person, PersonAdmin)
 
-admin.site.register(Family)
+class FamilyAdmin(admin.ModelAdmin):
+    list_display = ( 'id', )
+admin.site.register(Family, FamilyAdmin)
+
 admin.site.register(Event)
 admin.site.register(Place)
 admin.site.register(Media)
