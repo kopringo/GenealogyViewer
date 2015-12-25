@@ -351,7 +351,7 @@ class PrimaryObject(models.Model):
     handle = models.CharField(max_length=19, unique=True)
     gramps_id =  models.CharField('ID', max_length=25, blank=True)
 
-    private = models.BooleanField('private')
+    private = models.BooleanField('private', default=False)
     public = models.BooleanField('public', default=True)
 
     def __unicode__(self): 

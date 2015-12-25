@@ -4,9 +4,19 @@ from django.contrib import admin
 
 from models import *
 
-class PersonAdmin(admin.ModelAdmin):
-    fields = ( 'first_name', 'last_name', 'birth', 'death')
+###############################################################################
+# inline
 
+class FamilyInlineAdmin(admin.TabularInline):
+    model = Family
+
+###############################################################################
+# full views
+
+class PersonAdmin(admin.ModelAdmin):
+    list_display = ( 'first_name', 'last_name', 'birth', 'death')
+    list_display_links = ( 'first_name', 'last_name',)
+    inlines = (FamilyInlineAdmin, )
 admin.site.register(Person, PersonAdmin)
 
 admin.site.register(Family)
