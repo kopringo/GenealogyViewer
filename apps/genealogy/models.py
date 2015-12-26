@@ -362,7 +362,7 @@ class PrimaryObject(models.Model):
         return "/%s-view/%s/" % (self.__class__.__name__.lower(),
                            self.handle)
 
-class MyFamilies(models.Model):
+class MyFamily(models.Model):
     person = models.ForeignKey("Person")
     family = models.ForeignKey("Family")
     order = models.PositiveIntegerField(default=1)
@@ -386,7 +386,7 @@ class Person(PrimaryObject):
     birth = models.ForeignKey("Event", related_name="birth", blank=True, null=True)
     death = models.ForeignKey("Event", related_name="death", blank=True, null=True)
     
-    families = models.ManyToManyField('Family', blank=True, through="MyFamilies")
+    families = models.ManyToManyField('Family', blank=True, through="MyFamily", related_name='my_families')
     parent_family = models.ForeignKey('Family', related_name="parent_family", blank=True, null=True)
     
     
