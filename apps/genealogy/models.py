@@ -347,9 +347,9 @@ class PrimaryObject(models.Model):
         abstract = True
 
     ## Fields:
-    id = models.AutoField(primary_key=True)
-    handle = models.CharField(max_length=19, unique=True)
-    gramps_id =  models.CharField('ID', max_length=25, blank=True)
+    id = models.AutoField(primary_key=True,)
+    handle = models.CharField(max_length=32, unique=True, blank=True, default=True, help_text='Uniq handler for remote databases    ')
+    gramps_id =  models.CharField('Gramps ID', max_length=25, blank=True, default=True, help_text='Uniq ID from Gramps database')
 
     private = models.BooleanField('private', default=False)
     public = models.BooleanField('public', default=True)
@@ -380,7 +380,7 @@ class Person(PrimaryObject):
     last_name = models.CharField(max_length=128, blank=True)
     gender_type = models.IntegerField('GenderType', choices=GENDER_TYPE, default=2)
     
-    probably_alive = models.BooleanField("Probably alive")
+    probably_alive = models.BooleanField("Probably alive", default=True)
     
     events = models.ManyToManyField('Event', through="PersonEvent")
     birth = models.ForeignKey("Event", related_name="birth", blank=True, null=True)
