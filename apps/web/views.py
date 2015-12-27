@@ -17,9 +17,9 @@ def person_list(request):
     params['person_array'] = Person.objects.all().order_by('last_name', 'first_name')
     return render_to_response(request, 'web/person-list.html', params)
 
-def person_view(request, handle):
+def person_view(request, pid):
     params = {
-        'person': Person.objects.get(handle=handle)
+        'person': Person.objects.get(pk=pid)
         
     }
     
@@ -119,3 +119,7 @@ def branch_list(request):
 def test(request):
     params = {}
     return render_to_response(request, 'web/test.phtml', params)
+
+def manager(request):
+    params = {}
+    return render_to_response(request, 'web/manager.phtml', params)

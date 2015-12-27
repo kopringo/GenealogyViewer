@@ -311,8 +311,8 @@ class DateObject(models.Model):
 #---------------------------------------------------------------------------
 
 class Tag(models.Model):
-    handle = models.CharField(max_length=19, unique=True)
-    gramps_id = models.CharField(max_length=128, blank=True, null=True)
+    handle = models.CharField(max_length=19, unique=True, null=True)
+    #gramps_id = models.CharField(max_length=128, blank=True, null=True)
     last_saved = models.DateTimeField('last changed', auto_now=True) 
     last_changed = models.DateTimeField('last changed', null=True,
                                         blank=True) # user edits
@@ -348,19 +348,17 @@ class PrimaryObject(models.Model):
 
     ## Fields:
     id = models.AutoField(primary_key=True,)
-    handle = models.CharField(max_length=32, unique=True, blank=True, default=True, help_text='Uniq handler for remote databases    ')
-    gramps_id =  models.CharField('Gramps ID', max_length=25, blank=True, default=True, help_text='Uniq ID from Gramps database')
+    handle = models.CharField(max_length=32, unique=True, blank=True, default=None, help_text='Uniq handler for remote databases')
+    #gramps_id =  models.CharField('Gramps ID', max_length=25, blank=True, default=True, help_text='Uniq ID from Gramps database')
 
     private = models.BooleanField('private', default=False)
     public = models.BooleanField('public', default=True)
 
     def __unicode__(self): 
-        return u"%s: %s" % (self.__class__.__name__,
-                           self.gramps_id)
+        return u"%s: %s" % (self.__class__.__name__, self.handle)
 
     def get_url(self):
-        return "/%s-view/%s/" % (self.__class__.__name__.lower(),
-                           self.handle)
+        return "/%s-view/%s/" % (self.__class__.__name__.lower(), self.handle)
 
 class MyFamily(models.Model):
     person = models.ForeignKey("Person")
@@ -475,19 +473,19 @@ class Event(DateObject, PrimaryObject):
 #                                         object_id_field="object_id")
     
     def __unicode__(self):
-        return "[%s] (%s) %s" % (self.gramps_id, 
+        return "[%s] (%s) %s" % (str(self.handle), 
                                  self.event_type, 
                                  self.description)
 
 class Place(PrimaryObject):
     title = models.CharField(max_length=128, blank=True)
     #locations = models.ManyToManyField('Location', null=True, blank=True)
-    long = models.CharField(max_length=16, blank=True)
+    lng = models.CharField(max_length=16, blank=True)
     lat = models.CharField(max_length=16, blank=True)
     #url_list = models.ManyToManyField('Url', null=True, blank=True)
 
     def get_selection_string(self):
-        return "%s [%s]" % (self.title, self.gramps_id)
+        return "%s [%s]" % (self.title, str(self.id))
 
     def __unicode__(self):
         return str(self.title)
@@ -524,4 +522,4 @@ class Note(PrimaryObject):
         return tuple()
 
     def __unicode__(self):
-        return str(self.gramps_id)
+        return str(self.handle)

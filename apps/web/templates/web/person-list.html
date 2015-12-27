@@ -13,7 +13,7 @@
         </thead>
         <tbody>
         {% for person in person_array %}
-          <tr data-href="{% url person_view person.handle %}">
+          <tr data-href="{% url "person_view" person.id %}">
             <td>{{person.handle}}</td>
             <td>{{person.last_name}}</td>
             <td>{{person.first_name}}</td>
