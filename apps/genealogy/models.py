@@ -472,6 +472,8 @@ class Event(DateObject, PrimaryObject):
 #                                         content_type_field="object_type",
 #                                         object_id_field="object_id")
     
+    files = models.ManyToManyField('Media')
+    
     def __unicode__(self):
         return "[%s] (%s) %s" % (str(self.handle), 
                                  self.event_type, 

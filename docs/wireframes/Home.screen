@@ -2,12 +2,12 @@
 <model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
   <widgets xsi:type="model:Browser" id="2" x="64" y="152" width="1177" height="593" text="Browser&#xA;http://..." measuredWidth="1177" measuredHeight="593"/>
   <widgets xsi:type="model:HLine" id="3" x="64" y="248" width="1177" measuredWidth="1177" measuredHeight="6" foreground="#e4e4e4"/>
-  <widgets xsi:type="model:LinkBar" id="4" x="1024" y="214" text="Osoby, Miejsca, Pliki, Opcje" measuredWidth="204" measuredHeight="22">
+  <widgets xsi:type="model:LinkBar" id="4" x="976" y="214" text="Osoby, Dokumenty, Miejsca, Opcje" measuredWidth="251" measuredHeight="22">
     <font/>
     <items link="Persons.screen" x="0" y="0" width="40" height="22" text="Osoby"/>
-    <items link="Places.screen" x="58" y="0" width="46" height="22" text="Miejsca"/>
-    <items link="Files.screen" x="122" y="0" width="26" height="22" text="Pliki"/>
-    <items link="Settings.screen" x="166" y="0" width="37" height="22" text="Opcje"/>
+    <items link="Files.screen" x="58" y="0" width="73" height="22" text="Dokumenty"/>
+    <items link="Places.screen" x="149" y="0" width="46" height="22" text="Miejsca"/>
+    <items link="Settings.screen" x="213" y="0" width="37" height="22" text="Opcje"/>
   </widgets>
   <widgets xsi:type="model:Label" id="5" x="112" y="210" text="GenealogyViewer" measuredWidth="175" measuredHeight="30">
     <font size="18px"/>
