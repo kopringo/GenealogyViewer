@@ -49,6 +49,7 @@
 	          
 	      </ul>
 	      <ul class="nav navbar-nav navbar-right">
+	      	{% if tree_slug %}
 	        <li class="<?if($this->action == 'index'){?>active<?}?>">
 			  	<a href="{% url "home" %}">Wprowadzenie</a>
 			  </li>
@@ -79,6 +80,7 @@
 			    <a href="<?=$this->baseurl?>/doc-list">Metryki</a>
 			  </li>
 			   -->
+			{% endif %}
 	      </ul>
 	    </nav>
 	  </div>

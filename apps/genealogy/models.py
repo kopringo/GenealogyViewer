@@ -4,6 +4,8 @@
 
 from django.db import models
 
+from apps.web.models import FamilyTree
+
 #from django.contrib.contenttypes.models import ContentType
 #from django.contrib.contenttypes import generic
 #from gramps.gen.lib.date import Date as GDate, Today
@@ -353,6 +355,8 @@ class PrimaryObject(models.Model):
 
     private = models.BooleanField('private', default=False)
     public = models.BooleanField('public', default=True)
+    
+    tree = models.ForeignKey(FamilyTree)
 
     def __unicode__(self): 
         return u"%s: %s" % (self.__class__.__name__, self.handle)
@@ -525,3 +529,4 @@ class Note(PrimaryObject):
 
     def __unicode__(self):
         return str(self.handle)
+

@@ -6,7 +6,10 @@ from models import *
 from apps.genealogy.models import *
 
 def home(request):
-    return render_to_response(request, 'web/index.html', {})
+    params = {
+        'tree_slug': 'tree-0001',
+    }
+    return render_to_response(request, 'web/index.html', params)
 
 # ************************************************************************
 # person 
