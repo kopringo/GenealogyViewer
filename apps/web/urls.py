@@ -11,16 +11,16 @@ urlpatterns = [
     
     url(r'^(?P<tree_slug>.+)/$', home, name='home'),
     
-    url(r'^(?P<tid>.+)/person/list$',                 person_list,  name='person_list'),
-    url(r'^(?P<tid>.+)/person/(?P<pid>.*)/$',                person_view,  name='person_view'),
+    url(r'^(?P<tree_slug>.+)/person/list$',                 person_list,  name='person_list'),
+    url(r'^(?P<tree_slug>.+)/person/(?P<pid>.*)/$',                person_view,  name='person_view'),
     
-    url(r'^(?P<tid>.+)/family/list$',                      family_list,  name='family_list'),
+    url(r'^(?P<tree_slug>.+)/family/list$',                      family_list,  name='family_list'),
     
-    url(r'^(?P<tid>.+)/branch/list$',                      branch_list, name='branch_list'),
+    url(r'^(?P<tree_slug>.+)/branch/list$',                      branch_list, name='branch_list'),
     
-    url(r'^(?P<tid>.+)/test$',                             test),
+    url(r'^(?P<tree_slug>.+)/test$',                             test),
     
-    url(r'^(?P<tid>.+)/manager$',                           manager, name='manager'),
+    url(r'^(?P<tree_slug>.+)/manager$',                           manager, name='manager'),
     
     # mechanizm przelaczania wersji jezykowej
     #url(r'^lang/(?P<id>[plen]+)',   'views.lang',   name='lang'),

@@ -15,13 +15,14 @@ def home(request, tree_slug):
 # person 
 # ************************************************************************
 
-def person_list(request):
-    params = {}
+def person_list(request, tree_slug):
+    params = {'tree_slug': tree_slug}
     params['person_array'] = Person.objects.all().order_by('last_name', 'first_name')
     return render_to_response(request, 'web/person-list.html', params)
 
-def person_view(request, pid):
+def person_view(request, tree_slug, pid):
     params = {
+        'tree_slug': tree_slug,
         'person': Person.objects.get(pk=pid)
         
     }
@@ -32,8 +33,8 @@ def person_view(request, pid):
 # family 
 # ************************************************************************
 
-def family_list(request):
-    params = {}
+def family_list(request, tree_slug):
+    params = {'tree_slug': tree_slug}
     params['family_array'] = Family.objects.all()
     return render_to_response(request, 'web/family-list.html', params)
 
@@ -76,7 +77,7 @@ def __branch_dfs(person_id, color, persons, families):
             __branch_dfs(p.id, color, persons, families)
     
 
-def branch_list(request):
+def branch_list(request, tree_slug):
     
     # hehe
     
@@ -110,7 +111,7 @@ def branch_list(request):
     """
     
     # old
-    params = {}
+    params = {'tree_slug': tree_slug}
     persons = Person.objects.all().filter(parent_family=None).filter(last_name='Koperkiewicz')
     params['persons'] = persons
     params['action'] = 'branch_list'
@@ -119,10 +120,10 @@ def branch_list(request):
     
     
     
-def test(request):
-    params = {}
+def test(request, tree_slug):
+    params = {'tree_slug': tree_slug}
     return render_to_response(request, 'web/test.phtml', params)
 
-def manager(request):
-    params = {}
+def manager(request, tree_slug):
+    params = {'tree_slug': tree_slug}
     return render_to_response(request, 'web/manager.phtml', params)
