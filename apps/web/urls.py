@@ -5,7 +5,7 @@ from django.conf.urls import patterns, include, url
 from django.views.generic import RedirectView
 
 from views import person_list, person_view, family_list, branch_list, test, home, manager
-from views_trees import index
+from views_trees import index, index_import
 
 urlpatterns = [
     
@@ -26,4 +26,5 @@ urlpatterns = [
     #url(r'^lang/(?P<id>[plen]+)',   'views.lang',   name='lang'),
     
     url(r'^$', index, name='index'),
+    url(r'^import$', index_import, name='index_import'),
 ]

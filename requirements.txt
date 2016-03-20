@@ -5,3 +5,4 @@ django-bower==5.0.4
 MySQL-python
 django-bootstrap-form
 requests
+-e git://github.com/kopringo/simplepyged#egg=master
