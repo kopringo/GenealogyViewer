@@ -2,9 +2,12 @@
 
 from GenealogyViewer.utils import render_to_response
 
-from models import *
+from models import FamilyTree
 
 def index(request):
+    params = {}
     
-    return render_to_response(request, 'trees/index.html', {})
+    params['trees'] = FamilyTree.objects.all()
+    
+    return render_to_response(request, 'trees/index.html', params)
 

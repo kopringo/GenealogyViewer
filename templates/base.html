@@ -51,20 +51,20 @@
 	      <ul class="nav navbar-nav navbar-right">
 	      	{% if tree_slug %}
 	        <li class="<?if($this->action == 'index'){?>active<?}?>">
-			  	<a href="{% url "home" %}">Wprowadzenie</a>
+			  	<a href="{% url "home" tree_slug %}">Wprowadzenie</a>
 			  </li>
 			  <li class="<?if(in_array($this->action, array('person-list', 'person-view'))){?>active<?}?>">
-			    <a href="{% url "person_list" %}">Osoby</a>
+			    <a href="{% url "person_list" tree_slug %}">Osoby</a>
 			  </li>
 			  <li class="<?if($this->action == 'family-list'){?>active<?}?>">
-			    <a href="{% url "family_list" %}">Rodziny</a>
+			    <a href="{% url "family_list" tree_slug %}">Rodziny</a>
 			  </li>
 			  <li class="{% if action == "branch_list" %}active{% endif %}">
-			    <a href="{% url "branch_list" %}">Gałęzie</a>
+			    <a href="{% url "branch_list" tree_slug %}">Gałęzie</a>
 			  </li>
 			  {% if request.user.is_authenticated %}
 			  <li class="{% if action == "manager" %}active{% endif %}">
-			    <a href="{% url "manager" %}" class="text-danger">Manager</a>
+			    <a href="{% url "manager" tree_slug %}" class="text-danger">Manager</a>
 			  </li>
 			  <li class="">
 			    <a href="" class="text-danger">Logout</a>

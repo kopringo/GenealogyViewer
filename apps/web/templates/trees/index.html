@@ -2,6 +2,12 @@
 
 {% block content %}
 	
-	Lista drzew
+	<table class="table">
+	{% for tree in trees %}
+	<tr>
+		<td><a href="/{{ tree.slug }}/">{{ tree.name }}</a></td>
+	</tr>
+	{% endfor %}
+	</table>
 	
 {% endblock %}

@@ -5,9 +5,9 @@ from models import *
 
 from apps.genealogy.models import *
 
-def home(request):
+def home(request, tree_slug):
     params = {
-        'tree_slug': 'tree-0001',
+        'tree_slug': tree_slug,
     }
     return render_to_response(request, 'web/index.html', params)
 

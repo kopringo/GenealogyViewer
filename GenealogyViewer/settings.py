@@ -128,6 +128,9 @@ SITE_ID = 1
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(PROJECT_DIR, 'var', 'static')
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(PROJECT_DIR, 'var', 'uploads')
+
 BOWER_COMPONENTS_ROOT = os.path.join(PROJECT_DIR, 'var')
 BOWER_INSTALLED_APPS = (
     'jquery#1.9',
