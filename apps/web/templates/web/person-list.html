@@ -13,8 +13,8 @@
         </thead>
         <tbody>
         {% for person in person_array %}
-          <tr data-href="{% url "person_view" person.id %}">
-            <td><a href="{% url "person_view" person.id %}">{{person.id}}</a></td>
+          <tr data-href="{% url "person_view" tree_slug person.id %}">
+            <td><a href="{% url "person_view" tree_slug person.id %}">{{person.id}}</a></td>
             <td>{{person.last_name}}</td>
             <td>{{person.first_name}}</td>
             <td><?=@$personArray['event_12']?> <?=@$personArray['place_12']?></td>
