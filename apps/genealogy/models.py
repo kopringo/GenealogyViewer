@@ -259,7 +259,9 @@ DATE_NEW_YEAR_TYPE = ((0, ""),
 #---------------------------------------------------------------------------
 
 class DateObject(models.Model):
-    class Meta: abstract = True
+    
+    class Meta:
+        abstract = True
 
     calendar = models.IntegerField(default=0)
     day1 = models.IntegerField(default=0)
@@ -347,10 +349,11 @@ class PrimaryObject(models.Model):
     """
     class Meta:
         abstract = True
+        unique_together = (("handle", "tree"),)
 
     ## Fields:
     id = models.AutoField(primary_key=True,)
-    handle = models.CharField(max_length=32, unique=True, blank=True, default=None, help_text='Uniq handler for remote databases')
+    handle = models.CharField(max_length=32, blank=True, default=None, help_text='Uniq handler for remote databases')
     #gramps_id =  models.CharField('Gramps ID', max_length=25, blank=True, default=True, help_text='Uniq ID from Gramps database')
 
     private = models.BooleanField('private', default=False)

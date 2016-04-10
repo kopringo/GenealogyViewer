@@ -9,7 +9,7 @@ from models import FamilyTree
 
 from datetime import datetime
 
-from apps.genealogy.models import Person
+from apps.genealogy.models import Person, Family
 
 def index(request):
     params = {}
@@ -55,6 +55,23 @@ def index_import(request):
             p.first_name = given_name
             p.last_name = surname
             p.save()
+            
+        for fam in family_list:
+            id = fam.xref()
+        
+            husband = None
+            wife = None
+            if fam.husband():
+                husband = Person.objects.get(tree=familyTree, handle=fam.husband().xref())
+            if fam.wife():
+                wife = Person.objects.get(tree=familyTree, handle=fam.wife().xref())
+        
+            f = Family()
+            f.tree = familyTree
+            f.handle = id
+            f.father = husband
+            f.mother = wife
+            f.save()
         
     
     return render_to_response(request, 'trees/import.html', params)
