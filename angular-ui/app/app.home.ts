@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 @Component({
-    selector: 'my-app',
+    selector: 'app-home',
     template: `
     Family Tree... fullscreen
   `

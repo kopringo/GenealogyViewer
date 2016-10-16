@@ -14,6 +14,9 @@ var router_1 = require('@angular/router');
 var app_component_1 = require('./app.component');
 var app_home_1 = require('./app.home');
 var app_personlist_1 = require('./app.personlist');
+var app_person_1 = require('./app.person');
+var app_options_1 = require('./app.options');
+var app_person_details_1 = require("./app.person-details");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -22,9 +25,11 @@ var AppModule = (function () {
             imports: [platform_browser_1.BrowserModule,
                 router_1.RouterModule.forRoot([
                     { path: '', component: app_home_1.AppHome },
-                    { path: 'person-list', component: app_personlist_1.AppPersonList }
+                    { path: 'person-list', component: app_personlist_1.AppPersonList },
+                    { path: 'person-list/:id', component: app_person_1.AppPerson },
+                    { path: 'options', component: app_options_1.AppOptions }
                 ])],
-            declarations: [app_component_1.AppComponent, app_home_1.AppHome, app_personlist_1.AppPersonList],
+            declarations: [app_component_1.AppComponent, app_home_1.AppHome, app_personlist_1.AppPersonList, app_person_1.AppPerson, app_options_1.AppOptions, app_person_details_1.AppPersonDetails],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])

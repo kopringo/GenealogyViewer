@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
 @Component({
-    selector: 'my-app',
+    selector: 'app-person-list',
     template: `
     <div class="row">
         <div class="col-md-6">
+            <input type="text" name="q" class="form-control" placeholder="Who are you looking for?"/>
+            <br/>
+            
             <ul>
             
             <li><a routerLink="/person-list/1" routerLinkActive="active">Michał</a></li>

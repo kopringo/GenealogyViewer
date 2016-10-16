@@ -14,7 +14,7 @@ var AppHome = (function () {
     }
     AppHome = __decorate([
         core_1.Component({
-            selector: 'my-app',
+            selector: 'app-home',
             template: "\n    Family Tree... fullscreen\n  "
         }), 
         __metadata('design:paramtypes', [])
