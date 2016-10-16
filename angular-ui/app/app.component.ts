@@ -10,8 +10,9 @@ import { Component } from '@angular/core';
       <a routerLink="/document-list" routerLinkActive="active">Documents</a>
     </nav>
     <hr/>
-    <router-outlet></router-outlet>
-    
+    <div class="container">
+        <router-outlet></router-outlet>
+    </div> 
   `
 })
 export class AppComponent { }
