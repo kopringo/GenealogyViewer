@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute, Params } from '@angular/router';
+
 @Component({
     selector: 'my-app',
     template: `
@@ -9,4 +11,19 @@ import { Component } from '@angular/core';
     </div>
   `
 })
-export class AppPerson { }
+export class AppPerson implements OnInit {
+
+    constructor(
+        private route: ActivatedRoute,
+        private router: Router) {}
+
+    ngOnInit() {
+        this.route.params.subscribe(params => {
+            if (params['id']) {
+                alert(params['id']);
+            }
+        });
+    }
+
+
+}
