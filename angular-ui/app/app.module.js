@@ -12,7 +12,8 @@ var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var router_1 = require('@angular/router');
 var app_component_1 = require('./app.component');
-var app_component2_1 = require('./app.component2');
+var app_home_1 = require('./app.home');
+var app_personlist_1 = require('./app.personlist');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -20,10 +21,10 @@ var AppModule = (function () {
         core_1.NgModule({
             imports: [platform_browser_1.BrowserModule,
                 router_1.RouterModule.forRoot([
-                    { path: 'crisis-center', component: app_component_1.AppComponent },
-                    { path: 'heroes', component: app_component2_1.AppComponent2 }
+                    { path: '', component: app_home_1.AppHome },
+                    { path: 'person-list', component: app_personlist_1.AppPersonList }
                 ])],
-            declarations: [app_component_1.AppComponent, app_component2_1.AppComponent2],
+            declarations: [app_component_1.AppComponent, app_home_1.AppHome, app_personlist_1.AppPersonList],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])

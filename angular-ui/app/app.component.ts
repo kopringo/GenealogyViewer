@@ -2,12 +2,16 @@ import { Component } from '@angular/core';
 @Component({
     selector: 'my-app',
     template: `
-    <h1>Angular Router</h1>
+    <h1>Genealogy Viewer</h1>
     <nav>
-      <a routerLink="/crisis-center" routerLinkActive="active">Crisis Center</a>
-      <a routerLink="/heroes" routerLinkActive="active">Heroes</a>
+      <a routerLink="/" routerLinkActive="active">Home</a>
+      <a routerLink="/person-list" routerLinkActive="active">People</a>
+      <a routerLink="/place-list" routerLinkActive="active">Places</a>
+      <a routerLink="/document-list" routerLinkActive="active">Documents</a>
     </nav>
+    <hr/>
     <router-outlet></router-outlet>
+    
   `
 })
 export class AppComponent { }

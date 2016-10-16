@@ -3,15 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule }   from '@angular/router';
 
 import { AppComponent }   from './app.component';
-import { AppComponent2 }   from './app.component2';
+import { AppHome }   from './app.home';
+import { AppPersonList }   from './app.personlist';
 
 @NgModule({
     imports:      [ BrowserModule,
         RouterModule.forRoot([
-            { path: 'crisis-center', component: AppComponent },
-            { path: 'heroes', component: AppComponent2 }
+            { path: '', component: AppHome },
+            { path: 'person-list', component: AppPersonList }
         ]) ],
-    declarations: [ AppComponent, AppComponent2 ],
+    declarations: [ AppComponent, AppHome, AppPersonList ],
     bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

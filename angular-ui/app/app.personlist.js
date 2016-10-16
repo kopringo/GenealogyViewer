@@ -9,17 +9,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
+var AppPersonList = (function () {
+    function AppPersonList() {
     }
-    AppComponent = __decorate([
+    AppPersonList = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "\n    <h1>Genealogy Viewer</h1>\n    <nav>\n      <a routerLink=\"/\" routerLinkActive=\"active\">Home</a>\n      <a routerLink=\"/person-list\" routerLinkActive=\"active\">People</a>\n      <a routerLink=\"/place-list\" routerLinkActive=\"active\">Places</a>\n      <a routerLink=\"/document-list\" routerLinkActive=\"active\">Documents</a>\n    </nav>\n    <hr/>\n    <router-outlet></router-outlet>\n    \n  "
+            template: "\n    <div class=\"row\">\n        <div class=\"col-md-6\">lista os\u00F3b</div>\n        <div class=\"col-md-6\">Tree</div>\n    </div>\n  "
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], AppPersonList);
+    return AppPersonList;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.AppPersonList = AppPersonList;
+//# sourceMappingURL=app.personlist.js.map
