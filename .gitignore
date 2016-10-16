@@ -60,5 +60,9 @@ static_bower
 static/*
 .settings
 
+angular-ui/node_modules/*
+angular-ui/typings/*
+
 # Except this file
 !.gitkeep
+
