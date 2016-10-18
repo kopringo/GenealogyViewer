@@ -62,6 +62,7 @@ static/*
 
 angular-ui/node_modules/*
 angular-ui/typings/*
+angular-ui/dist/*
 
 # Except this file
 !.gitkeep
