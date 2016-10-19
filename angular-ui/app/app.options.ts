@@ -11,7 +11,7 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
     </div>
   `
 })
-export class AppOptions implements OnInit {
+export class AppOptions {
 
 
 

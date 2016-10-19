@@ -4,7 +4,19 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 @Component({
     selector: 'app-person-details',
     template: `
-    osoba jakas tam...
+    <div class="row">
+        <div class="col-md-2">photo</div>
+        <div class="col-md-10">
+            <h1>Osoba Jakas</h1>
+            <p>Birth: 10.10.1980 Warszawa</p>
+            <p>Dead: 10.10.2040 Warszawa</p>
+            <br/>
+            <p>Parents: <a routerLink="/person-list/10" routerLinkActive="active">Zenon Jakas</a> <a routerLink="/person-list/1" routerLinkActive="active">Kunegunda Jakas</a></p>
+            <p>Siblings: </p>
+        </div>
+    </div>
+    
+    
     <br/>
     <ul>
         <li><a routerLink="/person-list/10" routerLinkActive="active">A1</a></li>
@@ -15,6 +27,8 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 })
 export class AppPersonDetails implements OnInit {
 
+    ngOnInit() {
 
+    }
 
 }

@@ -37,3 +37,20 @@
 - export
 - managers
 -
+
+REST:
+/api/1/login
+/api/1/logout
+/api/1/people?q=&start=&limit=
+/api/1/people/:id
+/api/1/people/:id/documents
+/api/1/people/:id/documents/:id
+/api/1/people/:id/tree
+/api/1/documents?q=&start=&limit=
+/api/1/tree
+/api/1/tree/import
+/api/1/tree/export
+/api/1/families
+
+
+/api/1/options
