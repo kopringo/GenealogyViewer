@@ -1,0 +1,39 @@
+- Dashboard
+  - tree
+  - stats:
+    - number of individuals
+    - number of families
+    - number of documents
+    - unique surnames
+  - shortcuts
+- People
+  - columns:
+    - Name
+    - Birth date/place
+    - Death date/place
+    - Spouses
+  - filter/search
+    - name
+    - b/d date/place
+    - tag?
+- Person
+  - photo
+  - ID
+  - full name
+  - b/d date/place + document [x2]
+  - parents
+  - siblings
+  - families:
+    - spouse + event
+    - children
+  - chart (parents, grandparents)
+  - photos
+
+- Documents
+  - upload
+
+- Opcje:
+- import
+- export
+- managers
+-
