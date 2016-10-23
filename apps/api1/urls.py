@@ -5,9 +5,32 @@ from django.conf.urls import patterns, include, url
 from django.views.generic import RedirectView
 from django.contrib.auth.models import User
 
-from apps.genealogy.models import Person, Family, Event, Place, Media
+from apps.genealogy.models import Person, Family, Event, Place, Media, PrimaryObject
 
 from rest_framework import routers, serializers, viewsets
+from rest_framework import permissions
+
+class IsTreeOwner(permissions.BasePermission):
+    """
+    Custom permission to only allow owners of an object to edit it.
+    """
+
+    def has_object_permission(self, request, view, obj):
+        # Read permissions are allowed to any request,
+        # so we'll always allow GET, HEAD or OPTIONS requests.
+        if request.method in permissions.SAFE_METHODS:
+            return True
+
+        if not request.user.is_authenticated():
+            return False
+
+        if isinstance(obj, PrimaryObject):
+            tree = obj.tree
+            if tree.owners.filter(pk=request.user.id):
+                return True
+
+        
+        return False
 
 # Serializers define the API representation.
 class UserSerializer(serializers.HyperlinkedModelSerializer):
@@ -35,6 +58,7 @@ class MediaSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Media
         fields = ('url', 'path', 'mime', 'desc', )
+        
 
 # ViewSets define the view behavior.
 class UserViewSet(viewsets.ModelViewSet):
@@ -43,6 +67,8 @@ class UserViewSet(viewsets.ModelViewSet):
 class PersonViewSet(viewsets.ModelViewSet):
     queryset = Person.objects.all()
     serializer_class = PersonSerializer
+    permission_classes = (permissions.IsAuthenticated, IsTreeOwner, )
+    
 class FamilyViewSet(viewsets.ModelViewSet):
     queryset = Family.objects.all()
     serializer_class = PersonSerializer
@@ -55,6 +81,8 @@ class PlaceViewSet(viewsets.ModelViewSet):
 class MediaViewSet(viewsets.ModelViewSet):
     queryset = Media.objects.all()
     serializer_class = MediaSerializer
+    permission_classes = (permissions.IsAuthenticated, )
+    
 
 
 router = routers.DefaultRouter()
