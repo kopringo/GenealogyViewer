@@ -59,11 +59,14 @@ class MediaSerializer(serializers.HyperlinkedModelSerializer):
         model = Media
         fields = ('url', 'path', 'mime', 'desc', )
         
-
+#####################################################################
 # ViewSets define the view behavior.
+
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
+    permission_classes = (permissions.IsAuthenticated, IsTreeOwner, )
+    
 class PersonViewSet(viewsets.ModelViewSet):
     queryset = Person.objects.all()
     serializer_class = PersonSerializer
@@ -72,16 +75,22 @@ class PersonViewSet(viewsets.ModelViewSet):
 class FamilyViewSet(viewsets.ModelViewSet):
     queryset = Family.objects.all()
     serializer_class = PersonSerializer
+    permission_classes = (permissions.IsAuthenticated, IsTreeOwner, )
+    
 class EventViewSet(viewsets.ModelViewSet):
     queryset = Event.objects.all()
     serializer_class = EventSerializer
+    permission_classes = (permissions.IsAuthenticated, IsTreeOwner, )
+    
 class PlaceViewSet(viewsets.ModelViewSet):
     queryset = Place.objects.all()
     serializer_class = PlaceSerializer
+    permission_classes = (permissions.IsAuthenticated, IsTreeOwner, )
+    
 class MediaViewSet(viewsets.ModelViewSet):
     queryset = Media.objects.all()
     serializer_class = MediaSerializer
-    permission_classes = (permissions.IsAuthenticated, )
+    permission_classes = (permissions.IsAuthenticated, IsTreeOwner, )
     
 
 
@@ -94,8 +103,6 @@ router.register(r'places', PlaceViewSet)
 router.register(r'medias', MediaViewSet)
 
 urlpatterns = [
-    
     url(r'^', include(router.urls)),
-    
 ]
 
