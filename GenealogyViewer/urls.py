@@ -15,6 +15,10 @@ urlpatterns = [
 
     url(r'^admin/', include(admin.site.urls)),
     
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    
+    url(r'^api/v1/', include('apps.api1.urls')),
+    
     url(r'^', include('apps.web.urls')),
     #url(r'^', include('web.urls')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
