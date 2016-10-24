@@ -1,9 +1,13 @@
 # system
 curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 sudo apt-get install -y nodejs
-sudo apt-get install node-typescript
+sudo npm install typescript -g
+npm install lite-server --save-dev
 
 # npm
 npm install webpack
 npm install
 npm run typings install
+
+# run
+node_modules/lite-server/bin/lite-server
