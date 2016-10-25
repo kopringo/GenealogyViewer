@@ -1,13 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 
+import { PersonService } from './services/person.service';
+
 @Component({
     selector: 'app-person-details',
+    providers: [PersonService, ],
     template: `
     <div class="row">
-        <div class="col-md-2">photo</div>
-        <div class="col-md-10">
-            <h1>Osoba Jakas</h1>
+        <div class="col-md-4">
+        	<img src="" id="app-person-details-photo"/>
+        </div>
+        <div class="col-md-8">
+            <h1 class="fullname">Osoba Jakas</h1>
             <p>Birth: 10.10.1980 Warszawa</p>
             <p>Dead: 10.10.2040 Warszawa</p>
             <br/>
@@ -26,6 +31,8 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
   `
 })
 export class AppPersonDetails implements OnInit {
+
+	constructor (private personService: PersonService) {}
 
     ngOnInit() {
 

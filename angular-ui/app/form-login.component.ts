@@ -3,7 +3,7 @@ import { Account }    from './models/account';
 @Component({
     moduleId: module.id,
     selector: 'form-login',
-    templateUrl: 'hero-form.component.html'
+    templateUrl: 'templates/form-hero.component.html'
 })
 export class FormLoginComponent {
     powers = ['Really Smart', 'Super Flexible',

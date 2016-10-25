@@ -3,6 +3,7 @@ import { PersonService } from './services/person.service';
 
 @Component({
     selector: 'app-person-list',
+    providers: [PersonService, ],
     template: `
     <div class="row">
         <div class="col-md-6">[{{mode}}]
@@ -48,11 +49,12 @@ import { PersonService } from './services/person.service';
 export class AppPersonList implements OnInit {
 	mode = 'Observable';
 	
-	//constructor (private personService: PersonService) {}
+	constructor (private personService: PersonService) {}
 	
 	ngOnInit() { this.getList(); }
 	
     getList() {
+    	
     	return [];
     	/*
     	this.personService.getList()

@@ -12,3 +12,11 @@ h2, h3 {
 body {
     margin: 2em;
 }
+
+h1.fullname{
+	margin-top: 0px;
+}
+img#app-person-details-photo{
+	width: 100%;
+	max-height: 200px;
+}
