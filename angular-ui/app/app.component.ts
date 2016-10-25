@@ -5,14 +5,15 @@ import { Component } from '@angular/core';
     <header>
         <div class="container">
             <h1>Genealogy Viewer</h1>
-    <nav>
-      <a routerLink="/" routerLinkActive="active">Home</a>
-      <a routerLink="/person-list" routerLinkActive="active">People</a>
+            
+            <ul class="nav nav-tabs">
+            	<li role="presentation" class="active"><a routerLink="/" routerLinkActive="active">Home</a></li>
+            	<li role="presentation"><a routerLink="/person-list" routerLinkActive="active">People</a></li>
+            	<li role="presentation"><a routerLink="/document-list" routerLinkActive="active">Documents</a></li>
+            	<li role="presentation"><a routerLink="/options" routerLinkActive="active">Options</a></li>
+                
+            </ul>
       
-      <a routerLink="/document-list" routerLinkActive="active">Documents</a>
-      <a routerLink="/options" routerLinkActive="active">Options</a>
-    </nav>
-            <hr/>
         </div>
     
     </header>
