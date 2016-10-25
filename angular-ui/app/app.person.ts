@@ -19,7 +19,7 @@ export class AppPerson implements OnInit {
     ngOnInit() {
         this.route.params.subscribe(params => {
             if (params['id']) {
-                alert(params['id']);
+                //alert(params['id']);
             }
         });
     }

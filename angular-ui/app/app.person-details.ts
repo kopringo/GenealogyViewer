@@ -30,5 +30,7 @@ export class AppPersonDetails implements OnInit {
     ngOnInit() {
 
     }
+    
+    
 
 }
