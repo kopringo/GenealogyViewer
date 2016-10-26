@@ -6,7 +6,7 @@ import { PersonService } from './services/person.service';
     providers: [PersonService, ],
     template: `
     <div class="row">
-        <div class="col-md-6">[{{mode}}]
+        <div class="col-md-6">
             <input type="text" name="q" class="form-control" placeholder="Who are you looking for?"/>
             <br/>
             

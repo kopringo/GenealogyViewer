@@ -15,6 +15,8 @@ import { FormLoginComponent } from './form-login.component';
 
 import { PersonService } from './services/person.service';
 
+import { DocumentsComponent } from './documents.component';
+
 @NgModule({
     imports:      [ BrowserModule,
                     HttpModule,
@@ -23,12 +25,14 @@ import { PersonService } from './services/person.service';
         RouterModule.forRoot([
             { path: '', component: AppHome },
             { path: 'login', component: AppLogin },
-            { path: 'person-list', component: AppPersonList },
+            { path: 'persons', component: AppPersonList },
             { path: 'person-list/:id', component: AppPerson },
+            { path: 'documents', component: DocumentsComponent },
             { path: 'options', component: AppOptions }
         ]) ],
     declarations: [ AppComponent, AppHome, AppLogin, AppPersonList, AppPerson, AppOptions, AppPersonDetails, 
                     FormLoginComponent, 
+                    DocumentsComponent, 
                   ],
     bootstrap:    [ AppComponent ]
 })

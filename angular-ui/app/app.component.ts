@@ -8,8 +8,8 @@ import { Component } from '@angular/core';
             
             <ul class="nav nav-tabs">
             	<li role="presentation" class="active"><a routerLink="/" routerLinkActive="active">Home</a></li>
-            	<li role="presentation"><a routerLink="/person-list" routerLinkActive="active">People</a></li>
-            	<li role="presentation"><a routerLink="/document-list" routerLinkActive="active">Documents</a></li>
+            	<li role="presentation"><a routerLink="/persons" routerLinkActive="active">People</a></li>
+            	<li role="presentation"><a routerLink="/documents" routerLinkActive="active">Documents</a></li>
             	<li role="presentation"><a routerLink="/options" routerLinkActive="active">Options</a></li>
                 
             </ul>
