@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 @Component({
     selector: 'my-app',
     template: `
     <header>
         <div class="container">
             <h1>Genealogy Viewer</h1>
-            
+            [{{test}}]
             <ul class="nav nav-tabs">
             	<li role="presentation" class="active"><a routerLink="/" routerLinkActive="active">Home</a></li>
             	<li role="presentation"><a routerLink="/persons" routerLinkActive="active">People</a></li>
@@ -24,4 +24,11 @@ import { Component } from '@angular/core';
     </div> 
   `
 })
-export class AppComponent { }
+export class AppComponent {
+	@Input() test: string;
+	
+	constructor()
+    {
+        console.log('This if the value for user-id: ' + this.test);
+    }
+}
