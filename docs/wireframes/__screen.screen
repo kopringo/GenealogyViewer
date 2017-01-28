@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+  <widgets xsi:type="model:Browser" id="1" x="64" y="152" width="1177" height="593" text="Browser&#xA;http://..." measuredWidth="1177" measuredHeight="593">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:HLine" id="2" x="64" y="248" width="1177" measuredWidth="1177" measuredHeight="6" foreground="#e4e4e4"/>
+  <widgets xsi:type="model:Label" id="4" x="112" y="210" text="GenealogyViewer" measuredWidth="144" measuredHeight="30">
+    <font size="18px"/>
+  </widgets>
+  <widgets xsi:type="model:SearchField" id="5" x="736" y="206" width="359" text="Kogo szukasz?" measuredWidth="359" measuredHeight="37">
+    <font size="24px"/>
+  </widgets>
+  <widgets xsi:type="model:Combo" id="6" x="1120" y="213" width="98" text="Franek" measuredWidth="98" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Master" id="7" x="272" y="213" measuredWidth="199" measuredHeight="23" dimmed="true">
+    <screen xsi:type="model:Screen" href="__menu.screen#/"/>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>

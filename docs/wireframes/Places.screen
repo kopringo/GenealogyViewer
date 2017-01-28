@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
-  <widgets xsi:type="model:Browser" id="2" x="64" y="152" width="1177" height="593" text="Browser&#xA;http://..." measuredWidth="1177" measuredHeight="593"/>
+  <widgets xsi:type="model:Browser" id="2" x="64" y="152" width="1177" height="593" text="Browser&#xA;http://..." measuredWidth="1177" measuredHeight="593">
+    <font/>
+  </widgets>
   <widgets xsi:type="model:HLine" id="3" x="64" y="248" width="1177" measuredWidth="1177" measuredHeight="6" foreground="#e4e4e4"/>
   <widgets xsi:type="model:LinkBar" id="4" x="1024" y="214" text="Osoby, Miejsca, Pliki, Opcje" measuredWidth="199" measuredHeight="23" selection="1">
     <font/>
@@ -9,14 +11,20 @@
     <items link="Files.screen" x="119" y="0" width="25" height="23" text="Pliki"/>
     <items link="Settings.screen" x="162" y="0" width="36" height="23" text="Opcje"/>
   </widgets>
-  <widgets xsi:type="model:Label" id="5" x="74" y="211" text="GenealogyViewer" measuredWidth="157" measuredHeight="30" link="Home.screen">
+  <widgets xsi:type="model:Label" id="5" x="74" y="211" text="GenealogyViewer" measuredWidth="144" measuredHeight="30" link="Home.screen">
     <font size="18px"/>
   </widgets>
-  <widgets xsi:type="model:Map" id="6" x="584" y="272" width="647" height="417" measuredWidth="647" measuredHeight="417"/>
-  <widgets xsi:type="model:Table" id="7" x="74" y="320" width="503" height="369" text="Name,Last\nName,=. Age v,(w:30). Kids,Likes,(align:center). Actions&#xA;Peter,Severin,37,[x],{computer},[Edit] [View]&#xA;Henri,Severin,(bg:lightGreen).7,[],{train},[Edit] [View]&#xA;Olga,Severin,62,[x],{note},[Edit] [View]&#xA;[-] You can even&#xA;  [+] Make a&#xA;  [+] Tree table" measuredWidth="503" measuredHeight="369" alternative="#eeeeee">
+  <widgets xsi:type="model:Map" id="6" x="594" y="253" width="647" height="492" measuredWidth="647" measuredHeight="492"/>
+  <widgets xsi:type="model:Table" id="7" x="74" y="320" width="503" height="369" text="Name,Last\nName,=. Age v,(w:30). Kids,Likes,(align:center). Actions&#xA;Peter,Severin,37,[x],{computer},[Edit] [View]&#xA;Henri,Severin,(bg:lightGreen).7,[],{train},[Edit] [View]&#xA;Olga,Severin,62,[x],{note},[Edit] [View]&#xA;[-] You can even&#xA;  [+] Make a&#xA;  [+] Tree table" measuredWidth="503" measuredHeight="369" alternative="#eee">
     <font/>
+    <items x="429" y="39" width="23" height="15" text="Edit"/>
+    <items x="455" y="39" width="26" height="15" text="View"/>
+    <items x="429" y="61" width="23" height="15" text="Edit"/>
+    <items x="455" y="61" width="26" height="15" text="View"/>
+    <items x="429" y="83" width="23" height="15" text="Edit"/>
+    <items x="455" y="83" width="26" height="15" text="View"/>
   </widgets>
-  <widgets xsi:type="model:SearchField" id="8" x="74" y="272" width="503" text="Search" measuredWidth="503" measuredHeight="36">
+  <widgets xsi:type="model:SearchField" id="8" x="74" y="272" width="503" text="Search" measuredWidth="503" measuredHeight="37">
     <font size="24px"/>
   </widgets>
   <hRuler/>

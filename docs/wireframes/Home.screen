@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
-  <widgets xsi:type="model:Browser" id="2" x="64" y="152" width="1177" height="593" text="Browser&#xA;http://..." measuredWidth="1177" measuredHeight="593">
-    <font/>
-  </widgets>
-  <widgets xsi:type="model:HLine" id="3" x="64" y="248" width="1177" measuredWidth="1177" measuredHeight="6" foreground="#e4e4e4"/>
-  <widgets xsi:type="model:LinkBar" id="4" x="976" y="214" text="Osoby, Dokumenty, Miejsca, Opcje" measuredWidth="242" measuredHeight="23">
-    <font/>
-    <items link="Persons.screen" x="0" y="0" width="37" height="23" text="Osoby"/>
-    <items link="Files.screen" x="55" y="0" width="68" height="23" text="Dokumenty"/>
-    <items link="Places.screen" x="141" y="0" width="46" height="23" text="Miejsca"/>
-    <items link="Settings.screen" x="205" y="0" width="36" height="23" text="Opcje"/>
-  </widgets>
-  <widgets xsi:type="model:Label" id="5" x="112" y="210" text="GenealogyViewer" measuredWidth="144" measuredHeight="30">
-    <font size="18px"/>
+  <widgets xsi:type="model:Master" id="14" x="64" y="152" measuredWidth="1177" measuredHeight="593">
+    <screen xsi:type="model:Screen" href="__screen.screen#/"/>
   </widgets>
   <widgets xsi:type="model:Panel" id="6" x="985" y="624" width="233" measuredWidth="233" measuredHeight="100"/>
   <widgets xsi:type="model:Label" id="7" x="1073" y="655" text="miniaturka" measuredWidth="66" measuredHeight="23">
@@ -26,9 +15,6 @@
   </widgets>
   <widgets xsi:type="model:Text" id="10" x="478" y="534" width="400" height="120" text="http://d3js.org/&#xA;http://www.jointjs.com/&#xA;https://github.com/grampy/GenoTouch" measuredWidth="400" measuredHeight="120">
     <font/>
-  </widgets>
-  <widgets xsi:type="model:SearchField" id="11" x="416" y="264" width="558" text="Kogo szukasz?" measuredWidth="558" measuredHeight="37">
-    <font size="24px"/>
   </widgets>
   <hRuler/>
   <vRuler/>

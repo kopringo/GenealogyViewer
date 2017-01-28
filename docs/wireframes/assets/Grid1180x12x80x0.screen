@@ -1,0 +1,28 @@
+<!--
+
+Grid parameters:
+Width: 1180px
+Columns: 12
+Column width: 80px
+Margin: 0px
+Gutter width: 20px
+-->
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore" theme="clean">
+<widgets xsi:type="model:WidgetGroup" id="13" measuredWidth="1180" measuredHeight="600" name="Grid 1180x12">
+<widgets xsi:type="model:Panel" id="1" x="0" y="0" width="81" height="600" measuredWidth="81" measuredHeight="600" background="#f4cccc" border="none"/>
+<widgets xsi:type="model:Panel" id="2" x="100" y="0" width="81" height="600" measuredWidth="81" measuredHeight="600" background="#f4cccc" border="none"/>
+<widgets xsi:type="model:Panel" id="3" x="200" y="0" width="81" height="600" measuredWidth="81" measuredHeight="600" background="#f4cccc" border="none"/>
+<widgets xsi:type="model:Panel" id="4" x="300" y="0" width="81" height="600" measuredWidth="81" measuredHeight="600" background="#f4cccc" border="none"/>
+<widgets xsi:type="model:Panel" id="5" x="400" y="0" width="81" height="600" measuredWidth="81" measuredHeight="600" background="#f4cccc" border="none"/>
+<widgets xsi:type="model:Panel" id="6" x="500" y="0" width="81" height="600" measuredWidth="81" measuredHeight="600" background="#f4cccc" border="none"/>
+<widgets xsi:type="model:Panel" id="7" x="600" y="0" width="81" height="600" measuredWidth="81" measuredHeight="600" background="#f4cccc" border="none"/>
+<widgets xsi:type="model:Panel" id="8" x="700" y="0" width="81" height="600" measuredWidth="81" measuredHeight="600" background="#f4cccc" border="none"/>
+<widgets xsi:type="model:Panel" id="9" x="800" y="0" width="81" height="600" measuredWidth="81" measuredHeight="600" background="#f4cccc" border="none"/>
+<widgets xsi:type="model:Panel" id="10" x="900" y="0" width="81" height="600" measuredWidth="81" measuredHeight="600" background="#f4cccc" border="none"/>
+<widgets xsi:type="model:Panel" id="11" x="1000" y="0" width="81" height="600" measuredWidth="81" measuredHeight="600" background="#f4cccc" border="none"/>
+<widgets xsi:type="model:Panel" id="12" x="1100" y="0" width="81" height="600" measuredWidth="81" measuredHeight="600" background="#f4cccc" border="none"/>
+</widgets>
+<hRuler/>
+<vRuler/>
+<font/>
+</model:Screen>

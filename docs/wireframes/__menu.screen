@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+  <widgets xsi:type="model:LinkBar" id="1" x="432" y="214" text="Osoby, Miejsca, Pliki, Opcje" measuredWidth="199" measuredHeight="23" selection="0">
+    <font/>
+    <items link="Persons.screen" x="0" y="0" width="37" height="23" text="Osoby"/>
+    <items link="Places.screen" x="55" y="0" width="46" height="23" text="Miejsca"/>
+    <items link="Files.screen" x="119" y="0" width="25" height="23" text="Pliki"/>
+    <items link="Settings.screen" x="162" y="0" width="36" height="23" text="Opcje"/>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>

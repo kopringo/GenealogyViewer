@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
-  <widgets xsi:type="model:Browser" id="2" x="64" y="152" width="1177" height="593" text="Browser&#xA;http://..." measuredWidth="1177" measuredHeight="593"/>
+  <widgets xsi:type="model:Browser" id="2" x="64" y="152" width="1177" height="593" text="Browser&#xA;http://..." measuredWidth="1177" measuredHeight="593">
+    <font/>
+  </widgets>
   <widgets xsi:type="model:HLine" id="3" x="64" y="248" width="1177" measuredWidth="1177" measuredHeight="6" foreground="#e4e4e4"/>
   <widgets xsi:type="model:LinkBar" id="4" x="1024" y="214" text="Osoby, Miejsca, Pliki, Opcje" measuredWidth="199" measuredHeight="23" selection="2">
     <font/>
@@ -9,8 +11,11 @@
     <items x="119" y="0" width="25" height="23" text="Pliki"/>
     <items link="Settings.screen" x="162" y="0" width="36" height="23" text="Opcje"/>
   </widgets>
-  <widgets xsi:type="model:Label" id="5" x="74" y="211" text="GenealogyViewer" measuredWidth="157" measuredHeight="30" link="Home.screen">
+  <widgets xsi:type="model:Label" id="5" x="74" y="211" text="GenealogyViewer" measuredWidth="144" measuredHeight="30" link="Home.screen">
     <font size="18px"/>
+  </widgets>
+  <widgets xsi:type="model:Master" id="6" x="280" y="213" measuredWidth="306" measuredHeight="23">
+    <screen xsi:type="model:Screen" href="__menu.screen#/"/>
   </widgets>
   <hRuler/>
   <vRuler/>
