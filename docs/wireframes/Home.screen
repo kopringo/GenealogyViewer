@@ -1,20 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore" xmlns:o="http://wireframesketcher.com/1.0/model/overrides">
   <widgets xsi:type="model:Master" id="14" x="64" y="152" measuredWidth="1177" measuredHeight="593">
     <screen xsi:type="model:Screen" href="__screen.screen#/"/>
+    <overrides>
+      <widgetChanges xsi:type="o:Delete" ref="6"/>
+      <widgetChanges xsi:type="o:Delete" ref="5"/>
+    </overrides>
   </widgets>
   <widgets xsi:type="model:Panel" id="6" x="985" y="624" width="233" measuredWidth="233" measuredHeight="100"/>
-  <widgets xsi:type="model:Label" id="7" x="1073" y="655" text="miniaturka" measuredWidth="66" measuredHeight="23">
+  <widgets xsi:type="model:Label" id="7" x="1073" y="655" text="miniaturka" measuredWidth="64" measuredHeight="21">
     <font/>
   </widgets>
-  <widgets xsi:type="model:Label" id="8" x="501" y="443" text="graf edytowalny rodziny." measuredWidth="140" measuredHeight="23">
+  <widgets xsi:type="model:Label" id="8" x="501" y="443" text="graf edytowalny rodziny." measuredWidth="142" measuredHeight="21">
     <font/>
   </widgets>
-  <widgets xsi:type="model:Label" id="9" x="505" y="480" text="genogram" measuredWidth="63" measuredHeight="23">
+  <widgets xsi:type="model:Label" id="9" x="505" y="480" text="genogram" measuredWidth="62" measuredHeight="21">
     <font/>
   </widgets>
   <widgets xsi:type="model:Text" id="10" x="478" y="534" width="400" height="120" text="http://d3js.org/&#xA;http://www.jointjs.com/&#xA;https://github.com/grampy/GenoTouch" measuredWidth="400" measuredHeight="120">
     <font/>
+  </widgets>
+  <widgets xsi:type="model:Master" id="16" x="968" y="218" measuredWidth="259" measuredHeight="21" dimmed="true">
+    <screen xsi:type="model:Screen" href="__menu.screen#/"/>
   </widgets>
   <hRuler/>
   <vRuler/>

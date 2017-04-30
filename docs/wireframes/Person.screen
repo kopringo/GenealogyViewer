@@ -7,79 +7,86 @@
     <screen xsi:type="model:Screen" href="assets/Grid960x12x60x10.screen#/"/>
   </widgets>
   <widgets xsi:type="model:HLine" id="3" x="64" y="248" width="1177" measuredWidth="1177" measuredHeight="6" foreground="#e4e4e4"/>
-  <widgets xsi:type="model:Master" id="43" x="432" y="214" measuredWidth="199" measuredHeight="23">
+  <widgets xsi:type="model:Master" id="43" x="871" y="215" measuredWidth="259" measuredHeight="21">
     <screen xsi:type="model:Screen" href="__menu.screen#/"/>
+    <overrides>
+      <widgets ref="1">
+        <attributes key="selection" value="1"/>
+        <items ref="@items.0" link="Home.screen"/>
+        <items ref="@items.1" noLink="true"/>
+      </widgets>
+    </overrides>
   </widgets>
-  <widgets xsi:type="model:Label" id="6" x="199" y="211" text="GenealogyViewer" measuredWidth="144" measuredHeight="30" link="Home.screen">
+  <widgets xsi:type="model:Label" id="6" x="199" y="211" text="GenealogyViewer" measuredWidth="159" measuredHeight="30" link="Home.screen">
     <font size="18px"/>
   </widgets>
-  <widgets xsi:type="model:Breadcrumbs" id="7" x="199" y="253" text="Osoby, Franek" measuredWidth="96" measuredHeight="23">
+  <widgets xsi:type="model:Breadcrumbs" id="7" x="199" y="253" text="Osoby, Franek" measuredWidth="96" measuredHeight="21">
     <font/>
-    <items link="Persons.screen" x="0" y="0" width="35" height="23" text="Osoby"/>
-    <items x="55" y="0" width="38" height="23" text="Franek"/>
+    <items link="Persons2.screen" x="0" y="0" width="35" height="21" text="Osoby"/>
+    <items x="55" y="0" width="38" height="21" text="Franek"/>
   </widgets>
-  <widgets xsi:type="model:Label" id="8" x="199" y="496" text="Franek Kimono" measuredWidth="176" measuredHeight="37">
+  <widgets xsi:type="model:Label" id="8" x="199" y="496" text="Franek Kimono" measuredWidth="170" measuredHeight="35">
     <font size="24px"/>
   </widgets>
   <widgets xsi:type="model:Image" id="9" x="199" y="294" width="218" height="195" measuredWidth="218" measuredHeight="195" src="../../static_bower/bower_components/jquery/test/data/1x1.jpg"/>
-  <widgets xsi:type="model:Label" id="10" x="199" y="532" text="Birth: 12.12.1980" measuredWidth="103" measuredHeight="23">
+  <widgets xsi:type="model:Label" id="10" x="199" y="532" text="Birth: 12.12.1980" measuredWidth="102" measuredHeight="21">
     <font/>
   </widgets>
-  <widgets xsi:type="model:Link" id="11" x="301" y="532" text="Poznań" measuredWidth="43" measuredHeight="23">
+  <widgets xsi:type="model:Link" id="11" x="301" y="532" text="Poznań" measuredWidth="43" measuredHeight="21">
     <font/>
   </widgets>
-  <widgets xsi:type="model:Label" id="12" x="199" y="554" text="Wiek: 14 lat" measuredWidth="71" measuredHeight="23">
+  <widgets xsi:type="model:Label" id="12" x="199" y="554" text="Wiek: 14 lat" measuredWidth="70" measuredHeight="21">
     <font/>
   </widgets>
   <widgets xsi:type="model:VLine" id="13" x="584" y="253" height="483" measuredWidth="6" measuredHeight="483" foreground="#f3f3f3"/>
   <widgets xsi:type="model:Panel" id="14" x="438" y="461" width="505" height="33" measuredWidth="505" measuredHeight="33" background="#f3f3f3" foreground="#f3f3f3"/>
-  <widgets xsi:type="model:Label" id="15" x="448" y="466" text="Documents" measuredWidth="73" measuredHeight="23">
+  <widgets xsi:type="model:Label" id="15" x="448" y="466" text="Documents" measuredWidth="69" measuredHeight="21">
     <font/>
   </widgets>
   <widgets xsi:type="model:Icon" id="17" x="366" y="533" width="19" height="22" measuredWidth="19" measuredHeight="22" icon="new (large)"/>
   <widgets xsi:type="model:Panel" id="18" x="432" y="294" width="712" height="33" measuredWidth="712" measuredHeight="33" background="#f3f3f3" foreground="#f3f3f3"/>
-  <widgets xsi:type="model:Label" id="19" x="442" y="299" text="Family" measuredWidth="39" measuredHeight="23">
+  <widgets xsi:type="model:Label" id="19" x="442" y="299" text="Family" measuredWidth="39" measuredHeight="21">
     <font/>
   </widgets>
   <widgets xsi:type="model:Image" id="22" x="438" y="507" width="73" height="73" measuredWidth="73" measuredHeight="73"/>
   <widgets xsi:type="model:Image" id="23" x="526" y="507" width="73" height="73" measuredWidth="73" measuredHeight="73"/>
   <widgets xsi:type="model:Image" id="24" x="614" y="507" width="73" height="73" measuredWidth="73" measuredHeight="73"/>
   <widgets xsi:type="model:Image" id="25" x="702" y="507" width="73" height="73" measuredWidth="73" measuredHeight="73"/>
-  <widgets xsi:type="model:Label" id="27" x="432" y="336" text="Zuta Jakastam" measuredWidth="121" measuredHeight="30">
+  <widgets xsi:type="model:Label" id="27" x="432" y="336" text="Zuta Jakastam" measuredWidth="132" measuredHeight="30">
     <font size="18px"/>
   </widgets>
-  <widgets xsi:type="model:Label" id="28" x="563" y="342" text="Slub: 12.12.1980" measuredWidth="97" measuredHeight="23">
+  <widgets xsi:type="model:Label" id="28" x="563" y="342" text="Slub: 12.12.1980" measuredWidth="97" measuredHeight="21">
     <font/>
   </widgets>
-  <widgets xsi:type="model:Link" id="29" x="659" y="342" text="Poznań" measuredWidth="43" measuredHeight="23">
+  <widgets xsi:type="model:Link" id="29" x="659" y="342" text="Poznań" measuredWidth="43" measuredHeight="21">
     <font/>
   </widgets>
   <widgets xsi:type="model:Icon" id="30" x="706" y="340" width="19" height="22" measuredWidth="19" measuredHeight="22" icon="new (large)"/>
-  <widgets xsi:type="model:Text" id="31" x="432" y="370" text="* Dziecko1 (ur. 1880-1950)&#xA;* Dziecko 2 (ur. 2000)" measuredWidth="166" measuredHeight="30">
+  <widgets xsi:type="model:Text" id="31" x="432" y="370" text="* Dziecko1 (ur. 1880-1950)&#xA;* Dziecko 2 (ur. 2000)" measuredWidth="164" measuredHeight="26">
     <font/>
   </widgets>
-  <widgets xsi:type="model:Link" id="32" x="1080" y="299" text="add wife" measuredWidth="50" measuredHeight="23">
+  <widgets xsi:type="model:Link" id="32" x="1080" y="299" text="add wife" measuredWidth="50" measuredHeight="21">
     <font/>
   </widgets>
-  <widgets xsi:type="model:Link" id="33" x="908" y="466" text="add" measuredWidth="23" measuredHeight="23">
+  <widgets xsi:type="model:Link" id="33" x="908" y="466" text="add" measuredWidth="23" measuredHeight="21">
     <font/>
   </widgets>
-  <widgets xsi:type="model:Link" id="37" x="456" y="408" text="add child" measuredWidth="53" measuredHeight="23">
+  <widgets xsi:type="model:Link" id="37" x="456" y="408" text="add child" measuredWidth="52" measuredHeight="21">
     <font/>
   </widgets>
   <widgets xsi:type="model:TextArea" id="38" x="199" y="656" width="218" height="89" text="Note about the person" measuredWidth="218" measuredHeight="89">
     <font/>
   </widgets>
-  <widgets xsi:type="model:Label" id="39" x="195" y="579" text="Father: " measuredWidth="48" measuredHeight="23">
+  <widgets xsi:type="model:Label" id="39" x="195" y="579" text="Father: " measuredWidth="47" measuredHeight="21">
     <font/>
   </widgets>
-  <widgets xsi:type="model:Label" id="40" x="195" y="601" text="Mother: " measuredWidth="55" measuredHeight="23">
+  <widgets xsi:type="model:Label" id="40" x="195" y="601" text="Mother: " measuredWidth="53" measuredHeight="21">
     <font/>
   </widgets>
-  <widgets xsi:type="model:Link" id="41" x="244" y="579" text="Ktos tam (1890-1945)" measuredWidth="128" measuredHeight="23">
+  <widgets xsi:type="model:Link" id="41" x="244" y="579" text="Ktos tam (1890-1945)" measuredWidth="123" measuredHeight="21">
     <font/>
   </widgets>
-  <widgets xsi:type="model:Link" id="42" x="251" y="601" text="Matka Jakas (1899-1970)" measuredWidth="143" measuredHeight="23">
+  <widgets xsi:type="model:Link" id="42" x="251" y="601" text="Matka Jakas (1899-1970)" measuredWidth="139" measuredHeight="21">
     <font/>
   </widgets>
   <hRuler/>
