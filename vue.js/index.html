@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <script src="https://vuejs.org/js/vue.min.js"></script>
+    </head>
+   
+<body>
+	
+<script type="text/javascript">
+window.onload=function(){
+
+
+	Vue.component('my-component', {
+		  template: '<div>A custom component!</div>'
+	})
+	
+	const NotFound = { template: '<p>Page not found</p>' }
+	const Home = { template: '<p>home page <v-link href="/vue.js/about">about</v-link></p><my-component></my-component>' }
+	const About = { template: '<p>about page</p>' }
+	const routes = {
+	  '/vue.js/': Home,
+	  '/vue.js/about': About
+	}
+	new Vue({
+	  el: '#app',
+	  data: {
+	    currentRoute: window.location.pathname
+	  },
+	  computed: {
+	    ViewComponent () {
+	      return routes[this.currentRoute] || NotFound
+	    }
+	  },
+	  render (h) { return h(this.ViewComponent) }
+	});
+};
+
+</script>
+	
+<div id="app"></div>
+	
+</body> 
+   
+</html>
