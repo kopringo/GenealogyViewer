@@ -100,7 +100,7 @@ router.register(r'persons', PersonViewSet)
 router.register(r'families', FamilyViewSet)
 router.register(r'events', EventViewSet)
 router.register(r'places', PlaceViewSet)
-router.register(r'medias', MediaViewSet)
+router.register(r'files', MediaViewSet)
 
 urlpatterns = [
     url(r'^', include(router.urls)),

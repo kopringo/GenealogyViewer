@@ -1,8 +1,9 @@
-Django==1.9.4
-djangorestframework==3.5.1
+Django==2.0.3
+djangorestframework==3.7.7
 sphinx
+requests
 django-bower==5.0.4
 MySQL-python
 django-bootstrap-form
-requests
+django-filter
 -e git://github.com/kopringo/simplepyged#egg=master
