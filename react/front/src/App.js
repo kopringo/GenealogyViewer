@@ -4,19 +4,41 @@ import './App.css';
 
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import createMuiTheme from 'material-ui/styles';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
+import {blue500} from 'material-ui/styles/colors';
+import {List, ListItem} from 'material-ui/List';
+
+import ContentInbox from 'material-ui/svg-icons/content/inbox';
+import ActionGrade from 'material-ui/svg-icons/action/grade';
+import ContentSend from 'material-ui/svg-icons/content/send';
+import ContentDrafts from 'material-ui/svg-icons/content/drafts';
+import ActionInfo from 'material-ui/svg-icons/action/info';
+import Divider from 'material-ui/Divider';
 
 import {BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom';
 
 import About from './views/About';
 import Home from './views/Home';
 import NoMatch from './views/NoMatch';
-import Navigation from './components/navigation';
 import Individuals from './views/Individuals';
+
+import Navigation from './components/navigation';
 
 import AppBar from 'material-ui/AppBar';
 import Drawer from 'material-ui/Drawer';
 
 
+// blue500
+const muiTheme = getMuiTheme({
+  palette: {
+    //textColor: blue500,
+  },
+  appBar: {
+    height: 50,
+    color: blue500
+  },
+});
 
 class App extends Component {
 
@@ -37,26 +59,9 @@ class App extends Component {
 
   render() {
     return (
-      <MuiThemeProvider>
+      <MuiThemeProvider muiTheme={muiTheme}>
       <div className="App"> 
-        
-      <AppBar
-        title="Genealogy Viewer"
-        iconClassNameRight="muidocs-icon-navigation-expand-more"
-        onLeftIconButtonTouchTap={() => this._toggleDrawer()}
-        onClick={() => this._toggleDrawer()}
-      >
-        
-      </AppBar>
-        <Drawer open={this.state.drawerOpened} docked={false} onRequestChange={() => this._toggleDrawer()}/>
-
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React ;] [{this.props.name}] <button onClick={() => alert('ok!')}>dupa</button></h1>
-
-        </header>
-        <br/>
-        [
+          
         <Router>
           
           <Switch>
@@ -69,7 +74,6 @@ class App extends Component {
             <Route component={NoMatch}/>
           </Switch>
         </Router>
-        ]
       </div>
       </MuiThemeProvider>
       
