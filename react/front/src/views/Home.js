@@ -1,14 +1,22 @@
 import React from 'react';
+//import { Link } from 'react-router-dom';
 
-import Navigation from './view/navigation';
+import Navigation from '../components/navigation';
 
-const Home = () => {
-    return (
-        <div className="Home">
-            <Navigation/>
-            Home...
-        </div>
-    )
-}
+//import Button from 'material-ui/Button';
+
+const Home = () => (
+
+            <div className="Home">
+                <Navigation/>
+                Home...
+
+                
+                
+            </div>
+
+        );
+    
+//}
 
 export default Home;

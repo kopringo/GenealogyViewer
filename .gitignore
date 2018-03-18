@@ -71,3 +71,4 @@ angular-ui/dist/*
 .venv
 !var/.gitkeep
 !var/*/.gitkeep
+.vscode

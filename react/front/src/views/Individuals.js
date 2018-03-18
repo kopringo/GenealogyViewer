@@ -2,14 +2,14 @@ import React from 'react';
 
 import Navigation from '../components/navigation';
 
-const NoMatch = () => {
+const Individuals = () => {
     return (
-        <div className="NoMatch">
+        <div className="Individuals">
             <Navigation/>
 
-            nie znaleziono takiej strony...
+           Individuals
         </div>
     )
 }
 
-export default NoMatch;
+export default Individuals;
