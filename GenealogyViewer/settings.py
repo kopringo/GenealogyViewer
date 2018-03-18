@@ -41,12 +41,13 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'djangobower',
     'rest_framework',
-    'apps.genealogy',
-    'apps.web',
-    #'web',
+    'GenealogyViewer.apps.genealogy',
+    'GenealogyViewer.apps.web',
+    'GenealogyViewer.apps.api1',
 )
 
-MIDDLEWARE_CLASSES = (
+MIDDLEWARE = (
+    'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -63,7 +64,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(PROJECT_DIR, 'templates'),
+            os.path.join(PROJECT_DIR, 'GenealogyViewer', 'templates'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {

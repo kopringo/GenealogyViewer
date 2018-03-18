@@ -1,9 +1,10 @@
 Django==2.0.3
 djangorestframework==3.7.7
-sphinx
-requests
+requests==2.18.4
 django-bower==5.0.4
-MySQL-python
-django-bootstrap-form
+mysqlclient==1.3.12
 django-filter
--e git://github.com/kopringo/simplepyged#egg=master
+django-bootstrap-form
+python-gedcom
+pika
+Celery==4.1.0

@@ -67,3 +67,7 @@ angular-ui/dist/*
 # Except this file
 !.gitkeep
 
+.env
+.venv
+!var/.gitkeep
+!var/*/.gitkeep
