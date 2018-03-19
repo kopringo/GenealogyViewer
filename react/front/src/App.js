@@ -58,15 +58,15 @@ class App extends Component {
         <Router>
           
           <Switch>
-            <Route exact path='/' component={Home}/>
-            <Route path="/about" component={About} />
-            <Route path="/tree" component={Tree} />
+            <Route exact path='/' component={Home} />
+            <Route exact path="/about" component={About} />
+            <Route exact path="/:idTree" component={Tree} />
 
-            <Route path="/individuals" component={IndividualList}/>
-            <Route path="/individuals/:idIndividual" component={Individual}/>
-            <Route path="/places" component={PlaceList}/>
-            <Route path="/places/:idPlace" component={Place}/>
-            <Route path="/files" component={FileList}/>
+            <Route exact path="/:idTree/individuals" component={IndividualList} name="routeIndividualList"/>
+            <Route exact path="/:idTree/individuals/:idIndividual" component={Individual} />
+            <Route exact path="/:idTree/places" component={PlaceList} />
+            <Route exact path="/:idTree/places/:idPlace" component={Place} />
+            <Route exact path="/:idTree/files" component={FileList} />
 
             {/* when none of the above match, <NoMatch> will be rendered */}
             <Route component={NoMatch}/>

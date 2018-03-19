@@ -8,7 +8,9 @@
     "react-scripts": "1.1.1",
     "react-router-dom": "4.2.2",
     "material-ui": "0.20.0",
-    "axios": "0.18.0"
+    "axios": "0.18.0",
+    "@fortawesome/fontawesome": "1.1.4",
+    "@fortawesome/react-fontawesome": "0.0.17"
   },
   "scripts": {
     "start": "react-scripts start",

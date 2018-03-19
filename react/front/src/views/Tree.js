@@ -37,10 +37,15 @@ class Tree extends Component {
         //return null; // render null when app is not ready
         }
 
+        //console.log('!');
+        //console.log();
+
+        var idTree = this.props.match.params.idTree;
+
         return (
             <div className="Tree">
-                <Navigation/>
-                Home...
+                <Navigation idTree={idTree}/>
+                Tree...
 
                 
                 

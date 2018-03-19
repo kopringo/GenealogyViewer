@@ -1,11 +1,13 @@
 import React from 'react';
 
-//import Navigation from '../components/navigation';
+import Navigation from '../components/navigation';
 import { Link} from 'react-router-dom';
 
 const FileList = () => {
     return (
         <div className="FileList">
+
+            <Navigation/>
             
 
            FileList

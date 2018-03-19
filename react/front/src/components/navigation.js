@@ -9,8 +9,11 @@ import ContentInbox from 'material-ui/svg-icons/content/inbox';
 import ActionGrade from 'material-ui/svg-icons/action/grade';
 import ContentSend from 'material-ui/svg-icons/content/send';
 import ContentDrafts from 'material-ui/svg-icons/content/drafts';
-//import ActionInfo from 'material-ui/svg-icons/action/info';
 import Divider from 'material-ui/Divider';
+
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+
+//<FontAwesomeIcon icon="coffee"/>
 
 import AppBar from 'material-ui/AppBar';
 import Drawer from 'material-ui/Drawer';
@@ -30,10 +33,11 @@ class Navigation extends Component {
         drawerOpened: !this.state.drawerOpened
       })
     }
-  
+
     render() {
 
-//const Navigation = () => {
+      var idTree = this.props.idTree;
+
     return (
         <div>
             <AppBar
@@ -46,14 +50,14 @@ class Navigation extends Component {
       </AppBar>
         <Drawer open={this.state.drawerOpened} docked={false} onRequestChange={() => this._toggleDrawer()}>
           <h1 className="App-title">Welcome to React ;] [{this.props.name}] <button onClick={() => alert('ok!')}>test</button></h1>
-
+          <FontAwesomeIcon icon={["fab", "apple"]}/>
           <List>
-            <ListItem primaryText="Home" leftIcon={<ContentInbox />} containerElement={<Link to="/" />} />
+            <ListItem primaryText="Home" leftIcon={<FontAwesomeIcon icon="coffee"/>} containerElement={<Link to="/" />} />
             <ListItem primaryText="About" leftIcon={<ContentInbox />} containerElement={<Link to="/about" />} />
             <Divider />
-            <ListItem primaryText="Individuals" containerElement={<Link to="/individuals" />} />
-            <ListItem primaryText="Places" containerElement={<Link to="/places" />} />
-            <ListItem primaryText="Files" containerElement={<Link to="/files" />} />
+            <ListItem primaryText="Individuals" containerElement={<Link to={`/${idTree}/individuals`} />} />
+            <ListItem primaryText="Places" containerElement={<Link to={`/${idTree}/places`} />} />
+            <ListItem primaryText="Files" containerElement={<Link to={`/${idTree}/files`} />} />
           </List>
           
         </Drawer>
