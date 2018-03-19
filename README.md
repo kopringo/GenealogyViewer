@@ -1,4 +1,4 @@
-GrampsWeb
-=========
+Genealogy Viewer
+================
 
-Web frontend for Gramps family tree...2
+Simple genealogy software for cloud.

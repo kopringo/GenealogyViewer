@@ -2,14 +2,14 @@ import React from 'react';
 
 import Navigation from '../components/navigation';
 
-const Individuals = () => {
+const IndividualList = () => {
     return (
-        <div className="Individuals">
+        <div className="IndividualList">
             <Navigation/>
 
-           Individuals
+           IndividualList
         </div>
     )
 }
 
-export default Individuals;
+export default IndividualList;
