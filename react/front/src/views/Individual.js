@@ -7,7 +7,7 @@ const Individual = () => {
         <div className="Individual">
             <Navigation/>
 
-           Individuals
+           Profile
         </div>
     )
 }

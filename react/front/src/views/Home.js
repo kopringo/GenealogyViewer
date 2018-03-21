@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 
-import Navigation from '../components/navigation';
+//import Navigation from '../components/navigation';
 
 //import Button from 'material-ui/Button';
 import axios from 'axios';
