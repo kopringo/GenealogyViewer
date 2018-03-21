@@ -55,6 +55,7 @@ class Navigation extends Component {
             <ListItem primaryText="Home" leftIcon={<FontAwesomeIcon icon="coffee"/>} containerElement={<Link to="/" />} />
             <ListItem primaryText="About" leftIcon={<ContentInbox />} containerElement={<Link to="/about" />} />
             <Divider />
+            <ListItem primaryText="Tree" containerElement={<Link to={`/${idTree}`} />} />
             <ListItem primaryText="Individuals" containerElement={<Link to={`/${idTree}/individuals`} />} />
             <ListItem primaryText="Places" containerElement={<Link to={`/${idTree}/places`} />} />
             <ListItem primaryText="Files" containerElement={<Link to={`/${idTree}/files`} />} />

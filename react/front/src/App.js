@@ -37,7 +37,6 @@ class App extends Component {
 
   constructor(props) {
     super(props);
-    console.log('loaded');
     this.state = {
       modalVisible: false,
       drawerOpened: false
@@ -62,7 +61,7 @@ class App extends Component {
             <Route exact path="/about" component={About} />
             <Route exact path="/:idTree" component={Tree} />
 
-            <Route exact path="/:idTree/individuals" component={IndividualList} name="routeIndividualList"/>
+            <Route exact path="/:idTree/individuals" component={IndividualList}/>
             <Route exact path="/:idTree/individuals/:idIndividual" component={Individual} />
             <Route exact path="/:idTree/places" component={PlaceList} />
             <Route exact path="/:idTree/places/:idPlace" component={Place} />

@@ -1,15 +1,20 @@
-import React from 'react';
+import React, {Component} from 'react';
 
 import Navigation from '../components/navigation';
 
-const PlaceList = () => {
-    return (
-        <div className="PlaceList">
-            <Navigation/>
+class PlaceList extends Component {
 
-           PlaceList
-        </div>
-    )
+    render(){
+        var idTree = this.props.match.params.idTree;
+
+        return (
+            <div className="PlaceList">
+                <Navigation idTree={idTree}/>
+
+            PlaceList
+            </div>
+        )
+    }
 }
 
 export default PlaceList;

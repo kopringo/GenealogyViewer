@@ -15,44 +15,45 @@ import {
     TableRowColumn,
   } from 'material-ui/Table';
 
+var tableData = [
+    {
+      hash: 'bf3dba7064f5b5032328061559edba7c',
+      name: 'Testowe drzewo',
+      status: {},
+    },
+    {
+      hash: '3627801962f339e26da80f5015482fe4',
+      name: 'Drugie drzewo',
+      status: {},
+    },
+    {
+      hash: 'deb7a2c436bc9b0ce7f3871e62971b6d',
+      name: 'Drzecie drzewo',
+      status: {},
+    },
+    
+  ];
+
 /**
  * A simple table demonstrating the hierarchy of the `Table` component and its sub-components.
  */
 const TableExampleSimple = () => (
     <Table>
-      <TableHeader>
+      <TableHeader displaySelectAll={false}>
         <TableRow>
           <TableHeaderColumn>ID</TableHeaderColumn>
           <TableHeaderColumn>Tree</TableHeaderColumn>
           <TableHeaderColumn>Status</TableHeaderColumn>
         </TableRow>
       </TableHeader>
-      <TableBody>
-        <TableRow>
-          <TableRowColumn><Link to="/asdfasdf">asdfasdf</Link></TableRowColumn>
-          <TableRowColumn>John Smith</TableRowColumn>
-          <TableRowColumn>Employed</TableRowColumn>
+      <TableBody displayRowCheckbox={false}>
+        {tableData.map( (row, index) => (
+        <TableRow key={index}>
+          <TableRowColumn><Link to={`/${row.hash}`}>{row.hash}</Link></TableRowColumn>
+          <TableRowColumn>{row.name}</TableRowColumn>
+          <TableRowColumn></TableRowColumn>
         </TableRow>
-        <TableRow>
-          <TableRowColumn>2</TableRowColumn>
-          <TableRowColumn>Randal White</TableRowColumn>
-          <TableRowColumn>Unemployed</TableRowColumn>
-        </TableRow>
-        <TableRow>
-          <TableRowColumn>3</TableRowColumn>
-          <TableRowColumn>Stephanie Sanders</TableRowColumn>
-          <TableRowColumn>Employed</TableRowColumn>
-        </TableRow>
-        <TableRow>
-          <TableRowColumn>4</TableRowColumn>
-          <TableRowColumn>Steve Brown</TableRowColumn>
-          <TableRowColumn>Employed</TableRowColumn>
-        </TableRow>
-        <TableRow>
-          <TableRowColumn>5</TableRowColumn>
-          <TableRowColumn>Christopher Nolan</TableRowColumn>
-          <TableRowColumn>Unemployed</TableRowColumn>
-        </TableRow>
+        ))}
       </TableBody>
     </Table>
   );
@@ -60,14 +61,11 @@ const TableExampleSimple = () => (
 class Home extends Component {
 
     state = {
-        loading: true
-      };
+      loading: true
+    };
 
     constructor(props) {
         super(props);
-        
-        
-
         setTimeout(() => {
             axios.get('/api/v1/app.json', {}).then(function(response){
                 console.log(response.data);
@@ -76,8 +74,6 @@ class Home extends Component {
                 console.log(error);
             });
         }, 1500);
-
-        
     }
   
     render() {

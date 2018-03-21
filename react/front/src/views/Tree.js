@@ -37,9 +37,6 @@ class Tree extends Component {
         //return null; // render null when app is not ready
         }
 
-        //console.log('!');
-        //console.log();
-
         var idTree = this.props.match.params.idTree;
 
         return (

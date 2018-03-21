@@ -1,9 +1,23 @@
 {
     "items": [
         {
-            "id": "",
+            "id": "1",
             "first_name": "osoba",
             "last_name": "ok",
+            "father": null,
+            "mother": null
+        },
+        {
+            "id": "2",
+            "first_name": "osoba2",
+            "last_name": "ok2",
+            "father": null,
+            "mother": null
+        },
+        {
+            "id": "3",
+            "first_name": "osoba ktos",
+            "last_name": "nazwisko",
             "father": null,
             "mother": null
         }
