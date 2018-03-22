@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 
 import Navigation from '../components/navigation';
 
+import TextField from 'material-ui/TextField';
+
 import axios from 'axios';
 
 import {
@@ -13,6 +15,18 @@ import {
     TableRow,
     TableRowColumn,
   } from 'material-ui/Table';
+
+import FlatButton from 'material-ui/FlatButton';
+
+const FlatButtonExampleSimple = () => (
+    <div>
+      <FlatButton label="1" />
+      <FlatButton label="2" primary={true} />
+      <FlatButton label="3" secondary={true} />
+      <FlatButton label="4" disabled={true} />
+
+    </div>
+  );
 
 /**
  * A simple table demonstrating the hierarchy of the `Table` component and its sub-components.
@@ -47,6 +61,9 @@ class TableIndividuals extends Component {
     }
 
     render(){
+
+        var idTree = this.props.idTree;
+
         return (
         <Table>
         <TableHeader displaySelectAll={false}>
@@ -59,7 +76,7 @@ class TableIndividuals extends Component {
         <TableBody displayRowCheckbox={false}>
             {this.data.map( (row, index) => (
             <TableRow key={index}>
-            <TableRowColumn><Link to={`/${this.state.idTree}/indiduals/${row.id}`}>{row.id}</Link></TableRowColumn>
+            <TableRowColumn><Link to={`/${idTree}/individuals/${row.id}`}>{row.id}</Link></TableRowColumn>
             <TableRowColumn>{row.last_name}</TableRowColumn>
             <TableRowColumn>{row.first_name}</TableRowColumn>
             </TableRow>
@@ -89,9 +106,14 @@ class IndividualList extends Component {
 
         return (
             <div className="IndividualList">
-                <Navigation idTree={idTree}/>
+                <Navigation idTree={idTree} />
 
-                <TableIndividuals idTree={idTree}/>
+                <TextField hintText="Search field" />
+                <br/>
+                <FlatButtonExampleSimple />
+                <br/><br/>
+
+                <TableIndividuals idTree={idTree} />
             </div>
         )
     }

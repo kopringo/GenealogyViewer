@@ -11,7 +11,7 @@ import ContentInbox from 'material-ui/svg-icons/content/inbox';
 //import ContentDrafts from 'material-ui/svg-icons/content/drafts';
 import Divider from 'material-ui/Divider';
 
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+//import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 
 //<FontAwesomeIcon icon="coffee"/>
 
@@ -39,7 +39,7 @@ class Navigation extends Component {
       var idTree = this.props.idTree;
 
     return (
-        <div>
+        <div className="Navigation">
             <AppBar
         title="Genealogy Viewer"
         iconClassNameRight="muidocs-icon-navigation-expand-more"
@@ -50,9 +50,8 @@ class Navigation extends Component {
       </AppBar>
         <Drawer open={this.state.drawerOpened} docked={false} onRequestChange={() => this._toggleDrawer()}>
           <h1 className="App-title">Welcome to React ;] [{this.props.name}] <button onClick={() => alert('ok!')}>test</button></h1>
-          <FontAwesomeIcon icon={["fab", "apple"]}/>
           <List>
-            <ListItem primaryText="Home" leftIcon={<FontAwesomeIcon icon="coffee"/>} containerElement={<Link to="/" />} />
+            <ListItem primaryText="Home" containerElement={<Link to="/" />} />
             <ListItem primaryText="About" leftIcon={<ContentInbox />} containerElement={<Link to="/about" />} />
             <Divider />
             <ListItem primaryText="Tree" containerElement={<Link to={`/${idTree}`} />} />
