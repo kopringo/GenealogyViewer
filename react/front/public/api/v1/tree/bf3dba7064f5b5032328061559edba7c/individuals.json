@@ -1,25 +1,76 @@
 {
     "items": [
         {
-            "id": "1",
-            "first_name": "osoba",
-            "last_name": "ok",
+            "id": 1,
+            "first_name": "j",
+            "last_name": "k",
             "father": null,
-            "mother": null
+            "mother": null,
+            "parents": null,
+            "families": [
+                1
+            ],
+            "position": [0, 0]
         },
         {
-            "id": "2",
-            "first_name": "osoba2",
-            "last_name": "ok2",
+            "id": 2,
+            "first_name": "e",
+            "last_name": "k",
             "father": null,
-            "mother": null
+            "mother": null,
+            "parents": null,
+            "families": [
+                1
+            ],
+            "position": [0, 0]
         },
         {
-            "id": "3",
-            "first_name": "osoba ktos",
-            "last_name": "nazwisko",
+            "id": 3,
+            "first_name": "m",
+            "last_name": "k",
             "father": null,
-            "mother": null
+            "mother": null,
+            "parents": 1,
+            "families": [
+                2
+            ],
+            "position": [0, 0]
+        },
+        {
+            "id": 4,
+            "first_name": "ma",
+            "last_name": "k",
+            "father": null,
+            "mother": null,
+            "parents": 1,
+            "families": [
+                3
+            ],
+            "position": [0, 0]
+        },
+        {
+            "id": 5,
+            "first_name": "a",
+            "last_name": "k",
+            "father": null,
+            "mother": null,
+            "parents": null,
+            "families": [
+                2
+            ],
+            "position": [0, 0]
+        },
+        {
+            "id": 6,
+            "first_name": "d",
+            "last_name": "r",
+            "father": null,
+            "mother": null,
+            "parents": null,
+            "families": [
+                3
+            ],
+            "position": [0, 0]
         }
     ]
 }

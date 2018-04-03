@@ -1,5 +1,31 @@
 {
     "items": [
-        
+        {
+            "id": 1,
+            "father": 1,
+            "mother": 2,
+            "children": [3, 4],
+            "events": [
+
+            ]
+        },
+        {
+            "id": 2,
+            "father": 3,
+            "mother": 5,
+            "children": [],
+            "events": [
+
+            ]
+        },
+        {
+            "id": 3,
+            "father": 4,
+            "mother": 6,
+            "children": [],
+            "events": [
+                
+            ]
+        }
     ]
 }
