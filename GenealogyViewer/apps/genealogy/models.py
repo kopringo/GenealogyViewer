@@ -356,7 +356,7 @@ class PrimaryObject(models.Model):
     handle = models.CharField(max_length=32, blank=True, default=None, help_text='Uniq handler for remote databases')
     #gramps_id =  models.CharField('Gramps ID', max_length=25, blank=True, default=True, help_text='Uniq ID from Gramps database')
 
-    private = models.BooleanField('private', default=False)
+    #private = models.BooleanField('private', default=False)
     public = models.BooleanField('public', default=True)
     
     tree = models.ForeignKey(FamilyTree, on_delete=models.CASCADE)

@@ -6,5 +6,7 @@ mysqlclient==1.3.12
 django-filter
 django-bootstrap-form
 python-gedcom
+graphene-django
+
 pika
 Celery==4.1.0
