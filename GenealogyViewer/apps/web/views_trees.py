@@ -18,6 +18,9 @@ def index(request):
     
     return render_to_response(request, 'trees/index.html', params)
 
+from django.views.decorators.csrf import csrf_exempt
+
+@csrf_exempt
 def index_import(request):
     
     params = {}

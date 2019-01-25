@@ -1,4 +1,4 @@
-Django==2.0.3
+django~=2.1.5
 djangorestframework==3.7.7
 requests==2.18.4
 django-bower==5.0.4

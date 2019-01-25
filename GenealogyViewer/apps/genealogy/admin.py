@@ -26,7 +26,7 @@ class PersonAdmin(admin.ModelAdmin):
     inlines = (FamilyInlineAdmin, )
     #exclude = ('id', )
     search_fields = ['first_name', 'last_name', 'id', 'handle', ]
-    list_filter = ('public', 'private', 'gender_type', 'probably_alive', )
+    list_filter = ('public', 'gender_type', 'probably_alive', )
 admin.site.register(Person, PersonAdmin)
 
 class FamilyAdmin(admin.ModelAdmin):
