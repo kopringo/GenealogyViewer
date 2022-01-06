@@ -9,4 +9,4 @@ python-gedcom
 graphene-django
 
 pika
-Celery==4.1.0
+Celery==5.2.2
